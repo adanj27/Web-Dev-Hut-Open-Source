@@ -1,4 +1,4 @@
-# Web Dev
+# Web Dev Hut
 ![](https://img.shields.io/github/stars/adanj27/Web-Dev.svg) ![](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![](https://img.shields.io/github/issues/adanj27/Web-Dev.svg) ![](https://img.shields.io/github/license/adanj27/Web-Dev.svg) 
 
 
