@@ -31,7 +31,10 @@ npm install
 npm run dev
 ```
 
-## Uso
+## 🔗 Enlaces
+
+- Discord
+- Diseño Figma
 
 ## 🚀 Contribución
 
