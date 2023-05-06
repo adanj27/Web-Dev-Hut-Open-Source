@@ -3,7 +3,9 @@
 </p>
 
 <p align="center">
+
 ![](https://img.shields.io/github/stars/adanj27/Web-Dev.svg) ![](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![](https://img.shields.io/github/issues/adanj27/Web-Dev.svg) ![](https://img.shields.io/github/license/adanj27/Web-Dev.svg) 
+
 </p>
 
 #### WebDevHut es una web para aprender desarrollo web frontend y backend donde encontraras información sobre las tecnologías y herramientas necesarias que se usan en desarrollo web en general. Este es un proyecto de Open Source desarrollado conjuntamente por un grupo de gente que le encanta desarrollo web.
