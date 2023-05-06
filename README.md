@@ -51,7 +51,7 @@ npm run dev
 - Primero, clona el repositorio en tu máquina local usando el siguiente comando en tu terminal:
 
 ```bash
-git clone https://github.com/usuario/repo.git
+git clone https://github.com/adanj27/Web-Dev.git
 ```
 
 Esperamos que disfrutes contribuyendo a este proyecto. ¡Gracias por tu tiempo y esfuerzo!
