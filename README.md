@@ -37,12 +37,22 @@ npm run dev
 
 ## Contribución
 
+¡Gracias por tu interés en contribuir a nuestro proyecto! Aquí te mostramos cómo puedes hacerlo.
+
 - Lee las directrices de contribución antes de enviar cualquier cambio.
 - Sé respetuoso con otros contribuidores y usuarios del proyecto.
 - Contribuye con código de alta calidad que cumpla con las convenciones de estilo del proyecto.
 - Comunícate de manera clara y efectiva con el equipo del proyecto.
 - Haz cambios pequeños y realiza pruebas antes de enviar cambios.
 - Respeta las decisiones del equipo del proyecto si su contribución es rechazada.
+
+### Clonar y forkear el repositorio
+
+- Primero, clona el repositorio en tu máquina local usando el siguiente comando en tu terminal:
+
+```bash
+git clone https://github.com/usuario/repo.git
+```
 
 Esperamos que disfrutes contribuyendo a este proyecto. ¡Gracias por tu tiempo y esfuerzo!
 
