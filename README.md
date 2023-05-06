@@ -8,6 +8,10 @@
 
 </p>
 
+<p align="center">
+  <img src="https://flic.kr/p/2oyt6FG" alt="page" />
+</p>  
+
 #### WebDevHut es una web para aprender desarrollo web frontend y backend donde encontraras información sobre las tecnologías y herramientas necesarias que se usan en desarrollo web en general. Este es un proyecto de Open Source desarrollado conjuntamente por un grupo de gente que le encanta desarrollo web.
 
 - Si estas interesado en ser parte del proyecto por favor únete a nuestro canal de discord.
