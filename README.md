@@ -37,6 +37,15 @@ npm run dev
 
 ## Contribución
 
+- Lee las directrices de contribución antes de enviar cualquier cambio.
+- Sé respetuoso con otros contribuidores y usuarios del proyecto.
+- Contribuye con código de alta calidad que cumpla con las convenciones de estilo del proyecto.
+- Comunícate de manera clara y efectiva con el equipo del proyecto.
+- Haz cambios pequeños y realiza pruebas antes de enviar cambios.
+- Respeta las decisiones del equipo del proyecto si su contribución es rechazada.
+
+Esperamos que disfrutes contribuyendo a este proyecto. ¡Gracias por tu tiempo y esfuerzo!
+
 ## Licencia
 MIT
 ## Documentación
