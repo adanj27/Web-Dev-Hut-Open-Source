@@ -1,5 +1,5 @@
 <p align="center">
- # WebDevHut
+  WebDevHut
 </p>
 
 <p align="center">
