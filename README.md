@@ -18,8 +18,6 @@
 
 - [Discord](https://discord.gg/Hmew77TY).
 
-## 📋 Requisitos y dependencias
-
 ## ⏳ Instalación
 - (Usa npm para instalar las dependencias del proyecto.)
 
@@ -100,8 +98,6 @@ git push origin mi-nueva-funcion
 
 ## 📜 Licencia
 MIT
-## Documentación
 
-## Agradecimientos
 
 
