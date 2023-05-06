@@ -4,9 +4,9 @@
 
 #### WebDevHut es una web para aprender desarrollo web frontend y backend donde encontraras información sobre las tecnologías y herramientas necesarias que se usan en desarrollo web en general. Este es un proyecto de Open Source desarrollado conjuntamente por un grupo de gente que le encanta desarrollo web.
 
--Si estas interesado en ser parte del proyecto por favor únete a nuestro canal de discord.
+- Si estas interesado en ser parte del proyecto por favor únete a nuestro canal de discord.
 
--[Discord](https://discord.gg/Hmew77TY).
+- [Discord](https://discord.gg/Hmew77TY).
 
 ## Requisitos y dependencias
 
