@@ -1,9 +1,12 @@
-# Web Dev Hut
+# WebDevHut
 ![](https://img.shields.io/github/stars/adanj27/Web-Dev.svg) ![](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![](https://img.shields.io/github/issues/adanj27/Web-Dev.svg) ![](https://img.shields.io/github/license/adanj27/Web-Dev.svg) 
 
 
-#### Web Dev es un sitio para aprender a codificación y programación que necesario para desarrollo web - especialmente para los novatos. Es un proyecto de Open Source desarrollado conjuntamente por un grupo de gente que le encanta desarrollo web. 
+#### WebDevHut es una web para aprender desarrollo web frontend y backend donde encontraras información sobre las tecnologías y herramientas necesarias que se usan en desarrollo web en general. Este es un proyecto de Open Source desarrollado conjuntamente por un grupo de gente que le encanta desarrollo web.
 
+-Si estas interesado en ser parte del proyecto por favor únete a nuestro canal de discord.
+
+-[Discord](https://discord.gg/Hmew77TY).
 
 ## Requisitos y dependencias
 
