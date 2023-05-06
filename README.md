@@ -33,8 +33,8 @@ npm run dev
 
 ## 🔗 Enlaces
 
-- Discord
-- Diseño Figma
+- [Discord](https://discord.gg/Hmew77TY).
+- [Diseño Figma](https://www.figma.com/file/CVUWo2Up36fZrrC21cRi2J/Dise%C3%B1o-mockups?type=design&node-id=62%3A2&t=VS53gq55k94o10Bw-1).
 
 ## 🚀 Contribución
 
