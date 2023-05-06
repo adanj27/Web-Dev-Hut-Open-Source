@@ -35,7 +35,7 @@ npm run dev
 
 ## Uso
 
-### 🚀 Contribución
+## 🚀 Contribución
 
 ¡Gracias por tu interés en contribuir a nuestro proyecto! Aquí te mostramos cómo puedes hacerlo.
 
