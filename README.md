@@ -7,7 +7,18 @@
 
 ## Requisitos y dependencias
 
-## Instalación y configuración
+### ⏳ Instalación
+- (Usa npm para instalar las dependencias del proyecto.)
+
+```bash
+npm install
+```
+
+- (Usa npm para iniciar el proyecto.)
+
+```bash
+npm run dev
+```
 
 ## Uso
 
