@@ -114,4 +114,4 @@ Copyright © 2023 WebDevHut
 
 ## MIT
 
-- Vea el archivo [LICENSE](./LICENSE) para mas información de la licencia.
+- Vea el archivo [LICENCE](./LICENCE) para mas información de la licencia.
