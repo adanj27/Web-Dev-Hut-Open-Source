@@ -1,5 +1,5 @@
 <p align="center">
-  WebDevHut
+  <img src="./src/assets/logo2.png" width="318px" alt="WebDevHut logo" />
 </p>
 
 <p align="center">
@@ -36,6 +36,9 @@ npm run dev
 
 - [Discord](https://discord.gg/Hmew77TY).
 - [Diseño Figma](https://www.figma.com/file/CVUWo2Up36fZrrC21cRi2J/Dise%C3%B1o-mockups?type=design&node-id=62%3A2&t=VS53gq55k94o10Bw-1).
+- [Tareas del Proyecto](https://github.com/users/adanj27/projects/6/views/1)
+
+- Nota: Seguir el diseño hecho en figma.
 
 ## 🚀 Contribución
 
@@ -98,7 +101,7 @@ git push origin mi-nueva-funcion
 npm run lint:fix
 ```
 
-- Si tienes conflictos en la revisión de `lint` y `build` elimina tu Pull Request, revisa tu código, vuelve a ejecutar `lint` y envia una Pull Request.
+- Si tienes conflictos en la revisión de `lint` y `build` elimina tu Pull Request, revisa tu código, vuelve a ejecutar `npm run lint:fix` actualiza tu rama y envia una Pull Request a la rama master.
 
 - Envía un Pull Request a la rama `develop` del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
 
