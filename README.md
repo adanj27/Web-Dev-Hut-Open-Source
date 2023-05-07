@@ -92,7 +92,15 @@ git push origin mi-nueva-funcion
 
 ### 🤝 Enviar un Pull Request
 
-- Envía un Pull Request a la rama principal del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
+- Ejecutar eslint antes de enviar o subir tu rama ejecuta:
+
+```bash
+npm run lint:fix
+```
+
+- Si tienes conflictos en la revisión de `lint` y `build` elimina tu Pull Request, revisa tu código, vuelve a ejecutar `lint` y envia una Pull Request.
+
+- Envía un Pull Request a la rama `develop` del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
 
 ### 🕵️‍♂️ Esperar la revisión y aprobación
 
@@ -102,4 +110,8 @@ git push origin mi-nueva-funcion
 
 ## 📜 Licencia
 
-MIT
+Copyright © 2023 WebDevHut
+
+## MIT
+
+- Vea el archivo [LICENSE](./LICENSE) para mas información de la licencia.
