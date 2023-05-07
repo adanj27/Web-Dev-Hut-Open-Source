@@ -64,7 +64,7 @@ Si aún no lo has hecho, forkea el repositorio en tu cuenta de GitHub para tener
 
 ### 📝 Elegir una tarea
 
-- El siguiente paso es elegir una tarea para trabajar en ella. Puedes encontrar una tarea en la sección de problemas (issues) en el repositorio. Si no encuentras nada en la lista de problemas, puedes crear tu propio problema para resolverlo.
+- El siguiente paso es elegir una tarea para trabajar en ella. Puedes encontrar tareas en la sección de [projects](https://github.com/users/adanj27/projects/6/views/1) en el repositorio. Elige una y copia el enlace y pide a algún administrador que te asigne la tarea dandole tu nombre de usuario de github y el enlace de la tarea.
 
 ### 📂 Crear una rama
 
