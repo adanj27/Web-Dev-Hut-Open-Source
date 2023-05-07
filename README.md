@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://live.staticflickr.com/65535/52875956458_70fa5028e0_b.jpg" />
-</p>  
+</p>
 
 #### WebDevHut es una web para aprender desarrollo web frontend y backend donde encontraras información sobre las tecnologías y herramientas necesarias que se usan en desarrollo web en general. Este es un proyecto de Open Source desarrollado conjuntamente por un grupo de gente que le encanta desarrollo web.
 
@@ -19,6 +19,7 @@
 - [Discord](https://discord.gg/Hmew77TY).
 
 ## ⏳ Instalación
+
 - (Usa npm para instalar las dependencias del proyecto.)
 
 ```bash
@@ -97,10 +98,8 @@ git push origin mi-nueva-funcion
 
 - El equipo del proyecto revisará y discutirá tus cambios. Es posible que necesiten que realices algunos ajustes antes de que se puedan fusionar tus cambios en la rama principal.
 
- 🎉 ¡Gracias por tu contribución al proyecto!
+🎉 ¡Gracias por tu contribución al proyecto!
 
 ## 📜 Licencia
+
 MIT
-
-
-
