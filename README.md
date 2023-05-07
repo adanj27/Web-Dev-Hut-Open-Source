@@ -4,7 +4,7 @@
 
 <p align="center">
 
-![](https://img.shields.io/github/stars/adanj27/Web-Dev-Hut-Open-Sorce.svg) ![](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![](https://img.shields.io/github/issues/adanj27/Web-Dev-Hut-Open-Sorce.svg) [![Licencia MIT](https://img.shields.io/github/license/adanj27/Web-Dev-Hut-Open-Sorce.svg)](https://github.com/adanj27/Web-Dev-Hut-Open-Sorce/blob/main/LICENSE)
+![](https://img.shields.io/github/stars/adanj27/Web-Dev-Hut-Open-Source.svg) ![](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![](https://img.shields.io/github/issues/adanj27/Web-Dev-Hut-Open-Source.svg) [![Licencia MIT](https://img.shields.io/github/license/adanj27/Web-Dev-Hut-Open-Source.svg)](https://github.com/adanj27/Web-Dev-Hut-Open-Source/blob/main/LICENSE)
 
 </p>
 
