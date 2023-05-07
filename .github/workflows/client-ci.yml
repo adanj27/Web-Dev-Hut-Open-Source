@@ -1,0 +1,41 @@
+name: Client CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: '16'
+      - name: Install Lerna
+        run: npm ci
+      - name: Install dependencies
+        run: npx lerna bootstrap
+      - name: Build
+        run: npx lerna run lint
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: '16'
+      - name: Install Lerna
+        run: npm ci
+      - name: Install dependencies
+        run: npx lerna bootstrap
+      - name: Build
+        run: npx lerna run build
