@@ -1,10 +1,11 @@
 import './App.css'
+import { Layer, Navbar } from './components'
 
 function App() {
   return (
-    <>
-      <div>H</div>
-    </>
+    <Layer>
+      <Navbar />
+    </Layer>
   )
 }
 
