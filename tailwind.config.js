@@ -3,7 +3,18 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'footer-wave': 'url("/img/footer-wave.svg")',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& *')
+      addVariant('child-hover', '& *:hover')
+      addVariant('direct-child', '& > *')
+      addVariant('direct-child-hover', '& > *:hover')
+    },
+  ],
 }
