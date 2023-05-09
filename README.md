@@ -103,7 +103,7 @@ npm run lint:fix
 
 - Si tienes conflictos en la revisión de `lint` y `build` elimina tu Pull Request, revisa tu código, vuelve a ejecutar `npm run lint:fix` actualiza tu rama y envia una Pull Request a la rama master.
 
-- Envía un Pull Request a la rama `develop` del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
+- Envía un Pull Request a la rama `master` del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
 
 ### 🕵️‍♂️ Esperar la revisión y aprobación
 
@@ -117,4 +117,4 @@ Copyright © 2023 WebDevHut
 
 ## MIT
 
-- Vea el archivo [LICENCE](./LICENCE) para mas información de la licencia.
+- Vea el archivo [LICENSE](./LICENSE) para mas información de la licencia.
