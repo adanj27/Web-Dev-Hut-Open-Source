@@ -1,7 +1,8 @@
-export function IconButton({ Icon, ...props }) {
+export function IconButton({ Icon, as = 'button', ...props }) {
+  const As = as
   return (
-    <button className="child:w-10 child:h-10" {...props}>
+    <As className="child:w-10 child:h-10" {...props}>
       <Icon className="px-2" />
-    </button>
+    </As>
   )
 }
