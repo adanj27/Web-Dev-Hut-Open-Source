@@ -1,11 +1,14 @@
 import './App.css'
-import { Layer, Navbar } from './components'
+import { Layer, Navbar, Footer } from './components'
 
 function App() {
   return (
-    <Layer>
-      <Navbar />
-    </Layer>
+    <>
+      <Layer>
+        <Navbar />
+      </Layer>
+      <Footer />
+    </>
   )
 }
 

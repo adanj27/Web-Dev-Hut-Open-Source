@@ -3,7 +3,11 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'footer-wave': 'url("/img/footer-wave.svg")',
+      },
+    },
   },
   plugins: [
     function ({ addVariant }) {
