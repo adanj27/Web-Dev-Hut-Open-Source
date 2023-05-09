@@ -17,7 +17,7 @@ export function Navbar() {
         <Logo />
       </div>
 
-      <div className="xl:hidden relative z-50">
+      <div className="xl:hidden fixed top-11 right-5 z-50">
         <IconButton
           Icon={menuOpened ? RxCross1 : FiMenu}
           onClick={toggleMenu}
@@ -28,7 +28,7 @@ export function Navbar() {
       <div
         className={`${
           menuOpened ? 'block' : 'hidden'
-        } absolute right-0 top-0 w-full max-w-sm h-screen p-10 bg-[#292F4E] text-center xl:flex xl:items-start xl:static xl:w-auto xl:max-w-none xl:h-auto xl:p-0 xl:bg-transparent xl:text-start`}
+        } fixed right-0 top-0 z-40 w-full max-w-sm h-screen p-10 bg-[#292F4E] text-center xl:flex xl:items-start xl:static xl:w-auto xl:max-w-none xl:h-auto xl:p-0 xl:bg-transparent xl:text-start`}
       >
         <ul className="block mt-12 direct-child:mb-10 [&_a]:px-4 xl:flex xl:items-center xl:justify-start xl:mt-0 xl:direct-child:mr-10 xl:child:inline-block">
           <li>
