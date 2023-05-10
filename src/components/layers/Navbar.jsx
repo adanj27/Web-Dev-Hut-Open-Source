@@ -3,10 +3,7 @@ import { RiSearchLine } from 'react-icons/ri'
 import { BsDiscord } from 'react-icons/bs'
 import { FiMenu } from 'react-icons/fi'
 import { RxCross1 } from 'react-icons/rx'
-<<<<<<< HEAD
 import { Link } from 'react-router-dom'
-=======
->>>>>>> 6d25eff4411dfc12bca9aad691c6eba5d875cf47
 
 import { IconButton, Logo } from '../'
 
@@ -21,22 +18,17 @@ export function Navbar() {
         <Logo />
       </div>
 
-<<<<<<< HEAD
-      <div className="xl:hidden fixed top-11 right-5 z-50">
-=======
-      <div className="xl:hidden relative z-50">
->>>>>>> 6d25eff4411dfc12bca9aad691c6eba5d875cf47
+      <div className="fixed z-50 xl:hidden top-11 right-5">
         <IconButton
           Icon={menuOpened ? RxCross1 : FiMenu}
           onClick={toggleMenu}
-          className="child:w-12 child:h-12 my-auto block"
+          className="block my-auto child:w-12 child:h-12"
         />
       </div>
 
       <div
         className={`${
           menuOpened ? 'block' : 'hidden'
-<<<<<<< HEAD
         } fixed right-0 top-0 z-40 w-full max-w-sm h-screen p-10 bg-[#292F4E] text-center xl:flex xl:items-start xl:static xl:w-auto xl:max-w-none xl:h-auto xl:p-0 xl:bg-transparent xl:text-start`}
       >
         <ul className="block mt-12 direct-child:mb-10 [&_a]:px-4 xl:flex xl:items-center xl:justify-start xl:mt-0 xl:direct-child:mr-10 xl:child:inline-block">
@@ -54,25 +46,6 @@ export function Navbar() {
           </li>
           <li>
             <Link to="/otros-recursos">Otros recursos</Link>
-=======
-        } absolute right-0 top-0 w-full max-w-sm h-screen p-10 bg-[#292F4E] text-center xl:flex xl:items-start xl:static xl:w-auto xl:max-w-none xl:h-auto xl:p-0 xl:bg-transparent xl:text-start`}
-      >
-        <ul className="block mt-12 direct-child:mb-10 [&_a]:px-4 xl:flex xl:items-center xl:justify-start xl:mt-0 xl:direct-child:mr-10 xl:child:inline-block">
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Rutas</a>
-          </li>
-          <li>
-            <a href="#">Frontend</a>
-          </li>
-          <li>
-            <a href="#">Backend</a>
-          </li>
-          <li>
-            <a href="#">Otros recursos</a>
->>>>>>> 6d25eff4411dfc12bca9aad691c6eba5d875cf47
           </li>
         </ul>
 
