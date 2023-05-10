@@ -4,6 +4,7 @@ import { LearnRoutes } from '../pages/LearnRoutes'
 import { Frontend } from '../pages/Frontend'
 import { Backend } from '../pages/Backend'
 import { Other } from '../pages/Other'
+import { Error404 } from '../pages/Error404'
 import { Html } from '../pages/frontendPages/Html'
 import { Php } from '../pages/backendPages/Php'
 import { VisualStudioCode } from '../pages/other/VisualStudioCode'
@@ -11,7 +12,7 @@ import { VisualStudioCode } from '../pages/other/VisualStudioCode'
 export const AppRouter = () => {
   const frontendRoutes = [{ path: '/html', element: <Html /> }]
 
-  const backendRoutes = [{ path: '/html', element: <Php /> }]
+  const backendRoutes = [{ path: '/php', element: <Php /> }]
 
   const otherRoutes = [
     { path: '/visual-studio-code', element: <VisualStudioCode /> },
@@ -45,6 +46,7 @@ export const AppRouter = () => {
           element={route.element}
         />
       ))}
+      <Route path="*" element={<Error404 />} />
     </Routes>
   )
 }
