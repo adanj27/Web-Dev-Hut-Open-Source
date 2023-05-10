@@ -64,13 +64,13 @@ export function Footer() {
         </ul>
       </section>
 
-      <section className="mt-5 xl:mt-0 direct-child:mb-5 last:direct-child:mb-0 text-md text-center">
+      <section className="mt-5 text-center xl:mt-0 direct-child:mb-5 last:direct-child:mb-0 text-md">
         <p>Sitio creado con React.js, Vite, Tailwind, Json-Server.</p>
         <p>Web Dev v.0.1.0 &copy; 2023</p>
 
         <div className="direct-child:ml-2 first:direct-child:ml-0">
           <Link to="#">Términos y condiciones del servicio</Link>
-          <div className="mx-2 inline-block cursor-default select-none">|</div>
+          <div className="inline-block mx-2 cursor-default select-none">|</div>
           <Link to="#">Política de privacidad</Link>
         </div>
       </section>
