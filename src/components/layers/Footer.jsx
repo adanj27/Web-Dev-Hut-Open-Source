@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { AiFillHome } from 'react-icons/ai'
 import {
   MdComputer,
@@ -14,47 +16,50 @@ export function Footer() {
       <section className="mr-32 flex items-start justify-center text-lg [&_svg]:text-2xl [&_svg]:mr-2 [&_svg]:align-middle [&_a]:p-2">
         <ul className="mr-10 direct-child:mb-10 [&_svg]:inline-block">
           <li>
-            <a href="#">
+            <Link to="/">
               <AiFillHome /> Inicio
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/frontend">
               <MdComputer /> Frontend
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/backend">
               <MdOutlineBackupTable /> Backend
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/rutas">
               <MdAltRoute /> Rutas
-            </a>
+            </Link>
           </li>
         </ul>
 
         <ul className="direct-child:mb-10 [&_svg]:inline-block">
           <li>
-            <a href="#">
+            <Link to="/contacto">
               <MdContacts /> Contacto
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="https://discord.gg/Hmew77TY" target="_blank">
               <BsDiscord /> Discord
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link
+              to="https://github.com/adanj27/Web-Dev-Hut-Open-Source"
+              target="_blank"
+            >
               <BsGithub /> Github
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="#">
               <MdCardGiftcard /> Licencia
-            </a>
+            </Link>
           </li>
         </ul>
       </section>
@@ -64,9 +69,9 @@ export function Footer() {
         <p>Web Dev v.0.1.0 &copy; 2023</p>
 
         <div className="direct-child:ml-2 first:direct-child:ml-0">
-          <a href="#">Términos y condiciones del servicio</a>
+          <Link to="#">Términos y condiciones del servicio</Link>
           <div className="mx-2 inline-block cursor-default select-none">|</div>
-          <a href="#">Política de privacidad</a>
+          <Link to="#">Política de privacidad</Link>
         </div>
       </section>
     </footer>
