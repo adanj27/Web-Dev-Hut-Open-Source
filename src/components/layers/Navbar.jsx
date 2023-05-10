@@ -18,11 +18,11 @@ export function Navbar() {
         <Logo />
       </div>
 
-      <div className="xl:hidden fixed top-11 right-5 z-50">
+      <div className="fixed z-50 xl:hidden top-11 right-5">
         <IconButton
           Icon={menuOpened ? RxCross1 : FiMenu}
           onClick={toggleMenu}
-          className="child:w-12 child:h-12 my-auto block"
+          className="block my-auto child:w-12 child:h-12"
         />
       </div>
 
