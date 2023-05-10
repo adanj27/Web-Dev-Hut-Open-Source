@@ -1,15 +1,8 @@
 import './App.css'
-import { Layer, Navbar, Footer } from './components'
+import { Layer } from './components'
 
 function App() {
-  return (
-    <>
-      <Layer>
-        <Navbar />
-      </Layer>
-      <Footer />
-    </>
-  )
+  return <Layer></Layer>
 }
 
 export default App
