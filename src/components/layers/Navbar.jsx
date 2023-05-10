@@ -3,6 +3,7 @@ import { RiSearchLine } from 'react-icons/ri'
 import { BsDiscord } from 'react-icons/bs'
 import { FiMenu } from 'react-icons/fi'
 import { RxCross1 } from 'react-icons/rx'
+import { Link } from 'react-router-dom'
 
 import { IconButton, Logo } from '../'
 
@@ -32,19 +33,19 @@ export function Navbar() {
       >
         <ul className="block mt-12 direct-child:mb-10 [&_a]:px-4 xl:flex xl:items-center xl:justify-start xl:mt-0 xl:direct-child:mr-10 xl:child:inline-block">
           <li>
-            <a href="#">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <a href="#">Rutas</a>
+            <Link to="/rutas">Rutas</Link>
           </li>
           <li>
-            <a href="#">Frontend</a>
+            <Link to="/frontend">Frontend</Link>
           </li>
           <li>
-            <a href="#">Backend</a>
+            <Link to="/backend">Backend</Link>
           </li>
           <li>
-            <a href="#">Otros recursos</a>
+            <Link to="/otros-recursos">Otros recursos</Link>
           </li>
         </ul>
 
