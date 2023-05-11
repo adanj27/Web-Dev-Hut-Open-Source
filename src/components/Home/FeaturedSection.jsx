@@ -108,7 +108,7 @@ export function FeaturedSection() {
       </div>
 
       <div className="mt-10 direct-child:mb-8 direct-child:mr-8">
-        <div className="flex flex-wrap justify-center xl:flex-nowrap xl:justify-start gap-8">
+        <div className="flex flex-wrap justify-center xl:flex-nowrap xl:justify-between gap-8">
           <TechnologyAreaCard
             title={'Frontend'}
             technologies={technologies.frontend}
@@ -140,7 +140,7 @@ export function FeaturedSection() {
           </TechnologyAreaCard>
         </div>
 
-        <div className="flex flex-wrap justify-center xl:justify-start gap-8 direct-child:mb-8">
+        <div className="flex flex-wrap justify-center xl:justify-between gap-8 direct-child:mb-8">
           <Card
             mainImage={typescriptImage}
             iconImage={typescriptIcon}
