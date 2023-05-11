@@ -1,9 +1,10 @@
-import { Hero } from '../components/Home/Hero'
+import { Hero, FeaturedSection } from '../components'
 
 export const Home = () => {
   return (
     <>
       <Hero />
+      <FeaturedSection />
     </>
   )
 }
