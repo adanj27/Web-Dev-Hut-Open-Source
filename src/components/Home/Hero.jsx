@@ -3,7 +3,7 @@ import { BsDiscord } from 'react-icons/bs'
 
 export const Hero = () => {
   return (
-    <main className="flex h-screen py-10">
+    <main className="flex h-screen py-10 relative max-w-7xl m-auto">
       <div className="w-full flex items-center">
         <div className="">
           <div>

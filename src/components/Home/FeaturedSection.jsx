@@ -67,7 +67,7 @@ export function FeaturedSection() {
   }
 
   return (
-    <section className="text-white">
+    <section className="text-white max-w-7xl mx-auto relative">
       <div className="max-w-xs">
         <span className="text-sm">+20 temas sobre desarrollo web</span>
         <h3 className="text-2xl font-medium my-2">
@@ -140,7 +140,7 @@ export function FeaturedSection() {
           </TechnologyAreaCard>
         </div>
 
-        <div className="flex flex-wrap justify-center xl:justify-between gap-8 direct-child:mb-8">
+        <div className="grid xl:grid-cols-5 md:grid-cols-3 xs:grid-cols-2 justify-center xl:justify-between gap-8 direct-child:mb-8">
           <Card
             mainImage={typescriptImage}
             iconImage={typescriptIcon}
