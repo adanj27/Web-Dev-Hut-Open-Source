@@ -7,41 +7,48 @@ export function Card({
   title,
   description,
   to,
+  target = '_self',
+  className = '',
   ...props
 }) {
   return (
     <div
-      className="bg-gradient-to-br from-indigo-300 to-indigo-400 p-4 rounded-3xl w-full max-w-[230px] relative"
+      className={`bg-gray-500 bg-gradient-to-b p-4 rounded-3xl w-full max-w-[230px] max-h-[400px] overflow-auto relative [&_img]:select-none [&_img]:pointer-events-none ${className}`}
       {...props}
     >
       <img
         src={mainImage}
         alt=""
-        className="w-full h-auto max-h-[200px] object-cover"
+        className="w-full h-auto max-h-[150px] object-contain rounded-3xl"
+        draggable="false"
       />
       {iconImage && (
-        <div className="absolute top-4 right-4 z-10 w-9 h-9 rounded-[50px] direct-child:rounded-[50px] bg-[#1A1A58]">
+        <div className="absolute top-4 right-4 z-10 w-8 h-8 p-1 rounded-[50px] bg-[#1A1A58]">
           <img
             src={iconImage}
             alt=""
-            className="object-contain w-full h-full"
+            className="w-full h-full object-contain"
+            draggable="false"
           />
         </div>
       )}
 
-      <div className="font-medium text-white">
-        <h4 className="mt-5 text-3xl text-center">{title}</h4>
-        <p className="my-5 text-md line-clamp-4">{description}</p>
-      </div>
+      <div>
+        <div className="font-medium text-white text-center">
+          <h4 className="mt-2 text-2xl">{title}</h4>
+          <p className="mt-2 text-sm line-clamp-4 break-words">{description}</p>
+        </div>
 
-      {to && (
-        <Link
-          to={to}
-          className="w-9 h-9 bg-[#212D5F] block rounded-[50px] text-white mx-auto"
-        >
-          <BiRightArrowAlt className="w-full h-full" />
-        </Link>
-      )}
+        {to && (
+          <Link
+            to={to}
+            target={target}
+            className="w-7 h-7 bg-[#212D5F] block rounded-[50px] text-white mx-auto mt-4"
+          >
+            <BiRightArrowAlt className="w-full h-full" />
+          </Link>
+        )}
+      </div>
     </div>
   )
 }
