@@ -38,7 +38,7 @@ export const CardRoute = () => {
             <h2 className="text-2xl font-bold mt-2">{rout.title}</h2>
             <p className="font-normal my-2">{rout.p}</p>
           </div>
-          <div className="w-full flex justify-center text-2xl text-blue-950 p-2">
+          <div className="w-full flex justify-center text-2xl text-[#212D5F] p-2">
             <Link to={rout.to}>
               <BsFillArrowRightCircleFill />
             </Link>
