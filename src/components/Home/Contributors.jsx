@@ -7,6 +7,16 @@ export const Contributors = () => {
       url: 'https://github.com/adanj27',
       title: 'Adan Jimenez | Frontend',
     },
+    {
+      name: 'FOWMind',
+      url: 'https://github.com/FOWMind',
+      title: '',
+    },
+    {
+      name: 'ykIsCoding',
+      url: 'https://github.com/ykIsCoding',
+      title: '',
+    },
   ]
 
   return (
@@ -18,13 +28,13 @@ export const Contributors = () => {
         que este proyecto sea posible.
       </p>
       <h2 className="text-[32px] font-semibold">Frontend</h2>
-      <div className="flex justify-center py-10">
+      <div className="grid grid-cols-7 max-w-4xl mx-auto justify-center py-10">
         {users.map((user) => (
           <Link key={user} to={user.url}>
             <img
               src={`https://avatars.githubusercontent.com/${user.name}`}
               title={user.title}
-              className="w-[100px] bg-black rounded-full"
+              className="w-[90px] bg-black rounded-full"
               alt={`${user.name} image`}
             />
           </Link>
