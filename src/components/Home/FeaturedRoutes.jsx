@@ -3,7 +3,7 @@ import { MdAltRoute } from 'react-icons/md'
 
 export const FeaturedRoutes = () => {
   return (
-    <section className="my-36 max-w-7xl mx-auto relative grid grid-cols-2">
+    <section className="h-[90vh] items-center max-w-7xl mx-auto relative grid grid-cols-2">
       <div className="text-white">
         <p className="mb-3">¡No estás seguro de qué camino tomar?</p>
         <h2 className="font-bold text-5xl ">
