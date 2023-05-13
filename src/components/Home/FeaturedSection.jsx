@@ -67,7 +67,7 @@ export function FeaturedSection() {
   }
 
   return (
-    <section className="text-white max-w-7xl mx-auto relative">
+    <section className="text-white my-16">
       <div className="max-w-xs">
         <span className="text-sm">+20 temas sobre desarrollo web</span>
         <h3 className="text-2xl font-medium my-2">
@@ -79,7 +79,7 @@ export function FeaturedSection() {
         </p>
       </div>
 
-      <ul className="my-10 direct-child:inline-block direct-child:bg-gradient-to-b direct-child:from-white direct-child:to-gray-500 direct-child:p-[0.4rem] direct-child:rounded-[50px] direct-child:mr-6 [&_img]:w-6 [&_img]:h-6 [&_img]:object-contain [&_img]:select-none [&_img]:pointer-events-none">
+      <ul className="my-10 direct-child:inline-block direct-child:bg-gradient-to-b direct-child:from-white direct-child:to-gray-500 direct-child:p-[0.4rem] direct-child:rounded-[50px] sm:direct-child:mr-6 direct-child:mr-3 [&_img]:w-6 [&_img]:h-6 [&_img]:object-contain [&_img]:select-none [&_img]:pointer-events-none">
         <li>
           <img src={html5Icon} draggable="false" />
         </li>
@@ -107,8 +107,8 @@ export function FeaturedSection() {
         <SearchField className="float-right" />
       </div>
 
-      <div className="mt-10 direct-child:mb-8 direct-child:mr-8">
-        <div className="flex flex-wrap justify-center xl:flex-nowrap xl:justify-between gap-8">
+      <div className="mt-10 direct-child:mb-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           <TechnologyAreaCard
             title={'Frontend'}
             technologies={technologies.frontend}
@@ -140,7 +140,7 @@ export function FeaturedSection() {
           </TechnologyAreaCard>
         </div>
 
-        <div className="grid xl:grid-cols-5 md:grid-cols-3 xs:grid-cols-2 justify-center xl:justify-between gap-8 direct-child:mb-8">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 justify-center xl:justify-between sm:gap-8 gap-5 sm:direct-child:mb-8">
           <Card
             mainImage={typescriptImage}
             iconImage={typescriptIcon}
