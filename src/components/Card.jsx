@@ -19,7 +19,7 @@ export function Card({
       <img
         src={mainImage}
         alt=""
-        className="w-full h-auto max-h-[150px] object-contain rounded-3xl"
+        className="w-full h-[100px] object-contain rounded-3xl"
         draggable="false"
       />
       {iconImage && (
@@ -35,8 +35,10 @@ export function Card({
 
       <div>
         <div className="font-medium text-white text-center">
-          <h4 className="mt-2 text-2xl">{title}</h4>
-          <p className="mt-2 text-sm line-clamp-4 break-words">{description}</p>
+          <h4 className="mt-2 sm:text-2xl">{title}</h4>
+          <p className="mt-2 sm:text-sm text-[10px] line-clamp-4 break-words">
+            {description}
+          </p>
         </div>
 
         {to && (

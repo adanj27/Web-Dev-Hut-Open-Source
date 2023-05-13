@@ -13,7 +13,7 @@ export function Navbar() {
   const toggleMenu = () => setMenuOpened((x) => !x)
 
   return (
-    <nav className="flex items-center justify-between text-[#D9D9D9] text-lg max-w-7xl mx-auto py-10">
+    <nav className="flex items-center justify-between text-[#D9D9D9] text-lg max-w-7xl mx-auto py-10 px-5">
       <div>
         <Logo />
       </div>

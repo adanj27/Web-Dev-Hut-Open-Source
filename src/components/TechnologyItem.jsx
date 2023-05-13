@@ -10,12 +10,9 @@ export function TechnologyItem({
   ...props
 }) {
   return (
-    <div
-      className={`flex justify-start items-start mb-10 ${className}`}
-      {...props}
-    >
+    <div className={`flex justify-start items-start ${className}`} {...props}>
       {index && (
-        <div className="mx-6 bg-[#000021] rounded-[50px] text-center min-w-[1.5rem] min-h-[1.5rem">
+        <div className="sm:mx-6 mx-2 bg-[#000021] rounded-[50px] text-center min-w-[1.5rem] min-h-[1.5rem">
           <span className="inline-block">{index}</span>
         </div>
       )}
@@ -23,19 +20,21 @@ export function TechnologyItem({
       <div className="w-full max-w-[200px]">
         <div>
           <div className="flex justify-between items-start">
-            <h5 className="font-medium text-lg">{title}</h5>
+            <h5 className="font-medium sm:text-lg text-sm">{title}</h5>
             {to && (
               <Link
                 to={to}
                 target={target}
-                className="bg-gradient-to-b from-white to-gray-400 rounded-[50px] text-black font-medium text-sm px-3 py-[.15rem] max-w-[120px] line-clamp-1"
+                className="bg-gradient-to-b from-white to-gray-400 rounded-[50px] text-black font-medium sm:text-sm text-[8px] px-3 py-[.15rem] max-w-[120px] line-clamp-1"
               >
                 Ver
               </Link>
             )}
           </div>
 
-          <p className="text-sm mt-2 line-clamp-2">{description}</p>
+          <p className="sm:text-sm text-[10px] mt-2 line-clamp-2">
+            {description}
+          </p>
         </div>
       </div>
     </div>
