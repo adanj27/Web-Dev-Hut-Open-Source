@@ -5,6 +5,8 @@ import { FiMenu } from 'react-icons/fi'
 import { RxCross1 } from 'react-icons/rx'
 
 import { IconButton, Logo } from '../'
+import FrontEnd from '../../pages/Frontend'
+import Routes from '../../pages/Routes'
 
 export function Navbar() {
   const [menuOpened, setMenuOpened] = useState(false)
@@ -35,10 +37,10 @@ export function Navbar() {
             <a href="#">Inicio</a>
           </li>
           <li>
-            <a href="#">Rutas</a>
+            <a href={Routes.routename}>Rutas</a>
           </li>
           <li>
-            <a href="#">Frontend</a>
+            <a href={FrontEnd.routename}>Frontend</a>
           </li>
           <li>
             <a href="#">Backend</a>
