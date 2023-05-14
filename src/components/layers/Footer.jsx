@@ -12,7 +12,7 @@ import { BsDiscord, BsGithub } from 'react-icons/bs'
 
 export function Footer() {
   return (
-    <footer className="bg-[#181049] mt-20 p-10 xl:p-20 relative before:content-[''] before:absolute before:top-0 before:left-0 before:-translate-y-full before:w-full before:h-20 xl:before:h-24 before:bg-footer-wave before:bg-top before:bg-no-repeat before:bg-cover xl:flex xl:justify-center items-center direct-child:mx-auto text-white font-medium">
+    <footer className="bg-[#181049] mt-20 p-10 xl:p-20 relative z-20 before:content-[''] before:absolute before:top-0 before:left-0 before:-translate-y-full before:w-full before:h-20 xl:before:h-24 before:bg-footer-wave before:bg-top before:bg-no-repeat before:bg-cover xl:flex xl:justify-center items-center direct-child:mx-auto text-white font-medium">
       <section className="mr-32 flex items-start justify-center text-lg [&_svg]:text-2xl [&_svg]:mr-2 [&_svg]:align-middle [&_a]:p-2">
         <ul className="mr-10 direct-child:mb-10 [&_svg]:inline-block">
           <li>
