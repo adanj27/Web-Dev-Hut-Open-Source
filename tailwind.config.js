@@ -5,30 +5,39 @@ module.exports = {
   theme: {
     colors: {
       // Configure your color palette here
-      white: "#ffffff"
+      white: '#ffffff',
     },
     extend: {
       backgroundImage: {
         'footer-wave': 'url("/img/footer-wave.svg")',
       },
       fontFamily: {
-        'Inter':"'Inter', sans-serif"
+        Inter: "'Inter', sans-serif",
       },
-      fontSize:{
-        base: ['1rem',{
-          lineHeight: '30px'
-        }], //16px seguiendo figma
-        lg:['1.25rem',{
-          lineHeight: '22px'
-        }], //20px
-        xl: ['3rem',{
-          lineHeight:'40px'
-        }], //48px
+      fontSize: {
+        base: [
+          '1rem',
+          {
+            lineHeight: '30px',
+          },
+        ], //16px seguiendo figma
+        lg: [
+          '1.25rem',
+          {
+            lineHeight: '22px',
+          },
+        ], //20px
+        xl: [
+          '3rem',
+          {
+            lineHeight: '40px',
+          },
+        ], //48px
       },
       fontWeight: {
         thin: '500',
         medium: '600',
-        bold:'700'
+        bold: '700',
       },
     },
   },

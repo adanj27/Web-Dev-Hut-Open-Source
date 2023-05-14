@@ -1,14 +1,14 @@
 import './App.css'
 import { Layer, Navbar, Footer } from './components'
 
-function App({children}) {
+function App({ children }) {
   return (
     <>
       <Layer>
         <Navbar />
         {children}
       </Layer>
-     
+
       <Footer />
     </>
   )
