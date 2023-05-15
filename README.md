@@ -71,7 +71,7 @@ Si aún no lo has hecho, forkea el repositorio en tu cuenta de GitHub para tener
 
 ### 📂 Crear una rama
 
-- Crea una nueva rama desde la rama principal (main o master) utilizando un nombre descriptivo que indique el problema que estás solucionando. Por ejemplo:
+- Crea una nueva rama desde la rama principal (dev) utilizando un nombre descriptivo que indique el problema que estás solucionando. Por ejemplo:
 
 ```bash
 git checkout -b mi-nueva-funcion
@@ -103,7 +103,7 @@ npm run lint:fix
 
 - Si tienes conflictos en la revisión de `lint` y `build` elimina tu Pull Request, revisa tu código, vuelve a ejecutar `npm run lint:fix` actualiza tu rama y envia una Pull Request a la rama master.
 
-- Envía un Pull Request a la rama `master` del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
+- Envía un Pull Request a la rama `dev` del repositorio original con tu nueva rama. Asegúrate de proporcionar una descripción clara y detallada de los cambios que has realizado y por qué son importantes.
 
 ### 🕵️‍♂️ Esperar la revisión y aprobación
 
