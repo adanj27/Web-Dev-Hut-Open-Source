@@ -1,7 +1,11 @@
+import { Navbar, Footer } from '../'
+
 export function Layer({ children }) {
   return (
-    <div className="bg-[#201F47] min-h-screen px-5 py-10 xl:px-20 xl:py-14">
+    <div className="bg-[#201F47] relative overflow-x-hidden">
+      <Navbar />
       {children}
+      <Footer />
     </div>
   )
 }
