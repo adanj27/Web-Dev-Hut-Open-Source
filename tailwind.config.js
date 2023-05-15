@@ -6,7 +6,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'footer-wave': 'url("/img/footer-wave.svg")',
-        'hero-bg': 'url("/img/hero-bg.svg")',
       },
     },
     fontFamily: {

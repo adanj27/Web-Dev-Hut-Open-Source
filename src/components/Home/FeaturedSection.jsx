@@ -68,9 +68,9 @@ export function FeaturedSection() {
 
   return (
     <section className="text-white my-16">
-      <div className="max-w-xs">
+      <div className="max-w-sm sm:max-w-md">
         <span className="text-sm">+20 temas sobre desarrollo web</span>
-        <h3 className="text-2xl font-medium my-2">
+        <h3 className="text-3xl sm:text-4xl font-medium my-2">
           Aprende sobre las herramientas y tecnologías
         </h3>
         <p>
@@ -171,7 +171,7 @@ export function FeaturedSection() {
               'Framework de React para construir aplicaciones web del lado del servidor (SSR, por sus siglas en inglés)'
             }
             to="#"
-            className="from-[#34B3FA] to-[#95E9D7]"
+            className="from-[#34B3FA] to-[#4b7880]"
           />
 
           <Card
@@ -198,9 +198,9 @@ export function FeaturedSection() {
         </div>
       </div>
 
-      <Button icon={MdBallot} className="mx-auto">
-        Ver todo
-      </Button>
+      <div className="text-center">
+        <Button icon={MdBallot}>Ver todo</Button>
+      </div>
     </section>
   )
 }

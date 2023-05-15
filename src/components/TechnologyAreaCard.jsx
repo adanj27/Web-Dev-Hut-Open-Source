@@ -10,13 +10,13 @@ export function TechnologyAreaCard({
 }) {
   return (
     <div className={`bg-[#0E0F48] p-6 rounded-3xl ${className}`} {...props}>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="sm:flex sm:justify-between">
         {cardOrder === 0 && children}
 
         <div className={`${cardOrder === 0 ? 'sm:ml-6' : 'sm:mr-6'}`}>
           <h4
-            className={`uppercase font-medium sm:text-xl ${
-              cardOrder === 0 ? 'mb-10' : 'mb-10'
+            className={`uppercase font-medium text-xl sm:text-2xl ${
+              cardOrder === 0 ? 'my-5' : 'mb-5'
             }`}
           >
             {title}
@@ -26,7 +26,7 @@ export function TechnologyAreaCard({
             <div>
               {technologies.map(({ name, description, path }, i) => (
                 <TechnologyItem
-                  key={i}
+                  key={name + i}
                   index={i + 1}
                   title={name}
                   description={description}

@@ -35,8 +35,8 @@ export function Card({
 
       <div>
         <div className="font-medium text-white text-center">
-          <h4 className="mt-2 sm:text-2xl">{title}</h4>
-          <p className="mt-2 sm:text-sm text-[10px] line-clamp-4 break-words">
+          <h4 className="mt-2 text-xl sm:text-2xl">{title}</h4>
+          <p className="mt-2 text-sm sm:text-base line-clamp-4 break-words">
             {description}
           </p>
         </div>

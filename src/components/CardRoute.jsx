@@ -21,10 +21,10 @@ export const CardRoute = () => {
 
   return (
     <>
-      {routes.map((rout) => (
+      {routes.map((rout, i) => (
         <div
-          key={rout}
-          className="sm:w-[245px] sm:h-[280px] h-[200px] rounded-[40px] p-4 relative backdrop-blur-lg bg-black bg-opacity-20"
+          key={rout.title + i}
+          className="sm:max-w-[245px] overflow-y-auto rounded-[40px] p-4 relative backdrop-blur-lg bg-black bg-opacity-20"
         >
           <div className="absolute top-4 right-4 z-10 p-2 rounded-[50px] bg-[#909090]">
             <img
@@ -36,7 +36,7 @@ export const CardRoute = () => {
           </div>
           <div className="text-white">
             <h2 className="sm:text-2xl font-bold mt-2">{rout.title}</h2>
-            <p className="font-normal my-2 sm:text-sm text-[10px]">{rout.p}</p>
+            <p className="font-normal my-2 text-base sm:text-lg">{rout.p}</p>
           </div>
           <div className="w-full flex justify-center text-2xl text-[#212D5F] p-2">
             <Link
