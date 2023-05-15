@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../pages/Home'
-import { LearnRoutes } from '../pages/LearnRoutes'
+import  LearnRoutes from '../pages/LearnRoutes'
 import { Frontend } from '../pages/Frontend'
 import { Backend } from '../pages/Backend'
 import { Other } from '../pages/Other'
