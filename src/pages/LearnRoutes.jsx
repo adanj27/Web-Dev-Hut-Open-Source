@@ -24,12 +24,11 @@ class LearnRoutes extends Component {
           </div>
           <div class="grid flex-1">
             <div class="flex space-x-5 justify-center">
-            <button class="rounded-full">1</button>
-          <button class="rounded-full">2</button>
-          <button class="rounded-full">3</button>
+              <button class="rounded-full">1</button>
+              <button class="rounded-full">2</button>
+              <button class="rounded-full">3</button>
             </div>
           </div>
-          
         </div>
         <div class="flex grid-cols-2 gap-5 justify-center">
           <button class="rounded-full">FrontEnd</button>
