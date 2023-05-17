@@ -68,6 +68,7 @@ export default function LearnRoutes() {
             </div>
             <div className="overflow-hidden mx-6">
               <SearchField className="float-right" />
+
             </div>
           </div>
         </div>
@@ -85,3 +86,7 @@ export default function LearnRoutes() {
       </div>
     )
 }
+
+
+
+
