@@ -6,9 +6,11 @@ import { AppRouter } from './router/AppRouter'
 
 function App() {
   return (
-    <>
-      <div>H</div>
-    </>
+     <BrowserRouter>
+      <Layer>
+        <AppRouter />
+      </Layer>
+    </BrowserRouter>
   )
 }
 
