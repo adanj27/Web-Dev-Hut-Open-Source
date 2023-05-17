@@ -1,13 +1,13 @@
+import { BrowserRouter } from 'react-router-dom'
+
 import './App.css'
-import { Layer, Navbar, Footer } from './components'
+import { Layer } from './components'
+import { AppRouter } from './router/AppRouter'
 
 function App() {
   return (
     <>
-      <Layer>
-        <Navbar />
-      </Layer>
-      <Footer />
+      <div>H</div>
     </>
   )
 }

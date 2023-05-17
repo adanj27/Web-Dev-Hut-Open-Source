@@ -8,6 +8,17 @@ module.exports = {
         'footer-wave': 'url("/img/footer-wave.svg")',
       },
     },
+    fontFamily: {
+      body: ['"Roboto"', 'system-ui', '-apple-system', 'sans-serif'],
+    },
+    screens: {
+      xs: '320px',
+      sm: '565px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
   },
   plugins: [
     function ({ addVariant }) {
