@@ -5,6 +5,7 @@ import {
   Contributors,
   Container,
   SectionBg,
+  About,
 } from '../components'
 
 export const Home = () => {
@@ -24,6 +25,9 @@ export const Home = () => {
         <SectionBg image={'/img/routes-bg.svg'} className="-z-10" />
       </div>
 
+      <div className="relative z-10">
+        <About/>
+      </div>
       {/* <Container>
         New content here
       </Container> */}
