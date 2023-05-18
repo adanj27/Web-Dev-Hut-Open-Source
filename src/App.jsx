@@ -6,7 +6,7 @@ import { AppRouter } from './router/AppRouter'
 
 function App() {
   return (
-     <BrowserRouter>
+    <BrowserRouter>
       <Layer>
         <AppRouter />
       </Layer>
