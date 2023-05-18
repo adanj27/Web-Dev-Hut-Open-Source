@@ -26,7 +26,7 @@ export const Home = () => {
       </div>
 
       <div className="relative z-10">
-        <About/>
+        <About />
       </div>
       {/* <Container>
         New content here
