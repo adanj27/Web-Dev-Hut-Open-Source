@@ -11,7 +11,7 @@ export function TechnologyItem({
 }) {
   return (
     <div
-      className={`flex justify-start items-start mb-5 sm:mb-10 ${className}`}
+      className={`flex justify-start items-start mb-5 sm:mb-10 last:mb-0 ${className}`}
       {...props}
     >
       {index && (
@@ -20,7 +20,7 @@ export function TechnologyItem({
         </div>
       )}
 
-      <div className="w-full max-w-[200px]">
+      <div className="w-full 2lg:max-w-[200px]">
         <div>
           <div className="flex justify-between items-start">
             <h5 className="font-medium text-lg sm:text-xl">{title}</h5>

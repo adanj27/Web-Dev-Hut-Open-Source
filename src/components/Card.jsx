@@ -13,7 +13,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`bg-gray-500 bg-gradient-to-b p-4 rounded-3xl w-full max-w-[230px] max-h-[400px] overflow-auto relative [&_img]:select-none [&_img]:pointer-events-none ${className}`}
+      className={`bg-gray-500 bg-gradient-to-b p-4 rounded-3xl w-full 2lg:max-w-[230px] max-h-[400px] overflow-auto relative [&_img]:select-none [&_img]:pointer-events-none ${className}`}
       {...props}
     >
       <img

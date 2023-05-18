@@ -107,8 +107,8 @@ export function FeaturedSection() {
         <SearchField className="float-right" />
       </div>
 
-      <div className="mt-10 direct-child:mb-8">
-        <div className="grid lg:grid-cols-2 gap-8">
+      <div className="mt-10">
+        <div className="lg:flex lg:justify-between lg:items-start lg:gap-8 direct-child:mb-8">
           <TechnologyAreaCard
             title={'Frontend'}
             technologies={technologies.frontend}
@@ -120,7 +120,7 @@ export function FeaturedSection() {
               title={'React.js - Desarrollo web'}
               description={'Biblioteca de JavaScript para construir interfaces'}
               to="#"
-              className="from-[#FFDF6F] to-[#983232] max-w-full sm:max-w-[230px]"
+              className="from-[#FFDF6F] to-[#983232] mt-5 2lg:mt-0"
             />
           </TechnologyAreaCard>
 
@@ -135,7 +135,7 @@ export function FeaturedSection() {
               title={'Node.js - Desarrollo web'}
               description={'Entorno de ejecución de JavaScript'}
               to="#"
-              className="from-[#4BBDFA] to-[#276CDA] max-w-full sm:max-w-[230px]"
+              className="from-[#4BBDFA] to-[#276CDA] mb-5 2lg:mb-0"
             />
           </TechnologyAreaCard>
         </div>
@@ -199,7 +199,9 @@ export function FeaturedSection() {
       </div>
 
       <div className="text-center">
-        <Button icon={MdBallot}>Ver todo</Button>
+        <Button icon={MdBallot} className="mt-5">
+          Ver todo
+        </Button>
       </div>
     </section>
   )
