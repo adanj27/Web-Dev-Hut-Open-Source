@@ -68,7 +68,7 @@ export function FeaturedSection() {
   }
 
   return (
-    <section className="text-white my-16">
+    <section className="text-[#f1f1f1] my-16">
       <IntroductionText />
       <TechnologyIcons />
 

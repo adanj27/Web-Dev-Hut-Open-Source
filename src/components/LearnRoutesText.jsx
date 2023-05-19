@@ -9,7 +9,7 @@ export function LearnRoutesText({
   ...props
 }) {
   return (
-    <div className={`text-white ${className}`} {...props}>
+    <div className={`text-[#f1f1f1] ${className}`} {...props}>
       <p className="mb-3 sm:text-sm text-xs">
         ¿No estás seguro de qué camino tomar?
       </p>

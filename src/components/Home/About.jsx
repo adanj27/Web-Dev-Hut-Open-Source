@@ -4,14 +4,14 @@ import { Button } from '../Button'
 export function About() {
   return (
     <main>
-      <section className="my-10 text-center text-white">
+      <section className="my-10 text-center text-[#f1f1f1] dark:text-[#f1f1f1]">
         <div className="container mx-auto px-12 py-10 ">
-          <div className="text-center mt-16 my-10 text-white">
-            <h1 className="text-3xl font-semibold capitalize text-white dark:text-white lg:text-4xl">
+          <div className="text-center mt-16 my-10">
+            <h1 className="text-3xl font-semibold capitalize dark:text-[#f1f1f1] lg:text-4xl">
               Acerca del Proyecto
             </h1>
 
-            <p className="mx-auto mt-4 max-w-lg text-white">
+            <p className="mx-auto mt-4 max-w-lg">
               Este proyecto es una iniciativa de la comunidad web dev, una
               comunidad en línea dedicada a la creación y promoción de recursos
               educativos y herramientas para desarrolladores web. Nuestra misión

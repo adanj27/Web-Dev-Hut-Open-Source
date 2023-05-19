@@ -6,8 +6,8 @@ export function IntroductionText({ className = '', ...props }) {
         Aprende sobre las herramientas y tecnologías
       </h3>
       <p>
-        Aprende a programar y construir sitios web desde cero, domina las
-        herramientas y tecnologías más actuales.
+        Adquiere los conocimientos necesarios para programar y construir sitios
+        web desde cero, domina las herramientas y tecnologías más actuales.
       </p>
     </div>
   )

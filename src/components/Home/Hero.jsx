@@ -14,14 +14,14 @@ export const Hero = () => {
           <div>
             <div>
               <h1 className="text-5xl max-w-xs sm:text-6xl sm:max-w-md font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#961946] to-[#322C6F]">
-                Descubre el mundo del{' '}
+                Explora el mundo del{' '}
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#FFBFBF]">
                   desarrollo
                 </span>{' '}
                 web
               </h1>
             </div>
-            <p className="text-white text-base sm:text-lg font-semibold my-5 sm:w-2/3">
+            <p className="text-[#f1f1f1] text-base sm:text-lg my-5 sm:w-2/3">
               Descubre cómo construir sitios web impresionantes, aprende acerca
               de las mejores prácticas de desarrollo web, y mantente al día con
               las últimas noticias y tendencias del sector, todo en un solo
@@ -31,7 +31,7 @@ export const Hero = () => {
               <BsDiscord className="text-5xl text-[#3D3D3D]" />
               <span className="leading-6">Comunidad de discord</span>
             </button>
-            <p className="text-white text-base sm:text-lg font-semibold my-5 w-1/2">
+            <p className="text-[#f1f1f1] text-base sm:text-lg my-5 w-1/2">
               Únete a nuestra comunidad de discord para informarte de todas las
               novedades.
             </p>
