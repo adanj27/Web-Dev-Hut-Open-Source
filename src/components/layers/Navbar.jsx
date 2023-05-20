@@ -1,9 +1,9 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import { RiSearchLine } from 'react-icons/ri'
-import { BsDiscord } from 'react-icons/bs'
 import { FiMenu } from 'react-icons/fi'
 import { RxCross1 } from 'react-icons/rx'
-import { Link } from 'react-router-dom'
 
 import { IconButton, Logo } from '../'
 
@@ -13,7 +13,7 @@ export function Navbar() {
   const toggleMenu = () => setMenuOpened((x) => !x)
 
   return (
-    <nav className="flex items-center justify-between text-[#D9D9D9] text-lg max-w-7xl mx-auto py-10 px-5">
+    <nav className="relative z-40 flex items-center justify-between text-[#D9D9D9] text-lg max-w-7xl mx-auto py-10 px-5">
       <div>
         <Logo />
       </div>

@@ -6,7 +6,7 @@ import { SectionBg } from '../SectionBg'
 
 export const Hero = () => {
   return (
-    <div className="lg:min-h-screen">
+    <div className="pt-32 xl:pt-44 -mt-36 xl:-mt-44 lg:min-h-screen bg-gradient-to-br from-[#31109B] to-[#907EC8]">
       <SectionBg image="/img/hero-bg.svg" />
 
       <div className="max-w-screen-xl mx-auto px-5 py-10">
