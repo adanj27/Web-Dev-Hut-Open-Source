@@ -22,9 +22,6 @@ export default function LearnRoutes() {
               <div className="flex justify-end">
                 <TechnologyIcons />
               </div>
-              <div className="overflow-hidden mx-6">
-                <SearchField className="float-right" />
-              </div>
             </div>
           </div>
           <div className="flex grid-cols-2 gap-10 justify-center my-5">

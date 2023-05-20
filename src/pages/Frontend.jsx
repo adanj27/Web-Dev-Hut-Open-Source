@@ -36,9 +36,6 @@ export const Frontend = () => {
             <div className="flex justify-end">
               <TechnologyIcons />
             </div>
-            <div className="overflow-hidden">
-              <SearchField className="float-right" />
-            </div>
           </div>
         </div>
 

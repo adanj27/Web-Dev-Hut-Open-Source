@@ -10,7 +10,7 @@ export function SearchField({ className = '', ...props }) {
       <input
         type="text"
         placeholder="Buscar..."
-        className="bg-transparent placeholder:text-gray-300 text-sm rounded-[50px] block w-full h-full px-10 focus-within:outline-none"
+        className="bg-transparent placeholder:text-[#f1f1f1] text-white text-sm rounded-[50px] block w-full h-full px-10 focus-within:outline-none"
       />
     </div>
   )

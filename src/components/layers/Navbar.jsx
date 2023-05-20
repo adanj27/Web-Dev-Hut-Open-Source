@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { RiSearchLine } from 'react-icons/ri'
 import { FiMenu } from 'react-icons/fi'
 import { RxCross1 } from 'react-icons/rx'
 
-import { IconButton, Logo } from '../'
+import { IconButton, Logo, SearchField } from '../'
 
 export function Navbar() {
   const [menuOpened, setMenuOpened] = useState(false)
@@ -50,7 +49,7 @@ export function Navbar() {
         </ul>
 
         <div className="direct-child:inline-block direct-child:mr-2 last:direct-child:mr-0">
-          <IconButton Icon={RiSearchLine} />
+          <SearchField />
         </div>
       </div>
     </nav>

@@ -72,10 +72,6 @@ export function FeaturedSection() {
       <IntroductionText />
       <TechnologyIcons />
 
-      <div className="overflow-hidden">
-        <SearchField className="float-right" />
-      </div>
-
       <div className="mt-10">
         <div className="lg:flex lg:justify-between lg:items-start lg:gap-8 direct-child:mb-8">
           <TechnologyAreaCard
