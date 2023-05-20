@@ -28,7 +28,7 @@ export const Frontend = () => {
   }
 
   return (
-    <section className="text-white my-16 max-w-7xl mx-auto">
+    <section className="text-[#f1f1f1] my-16 max-w-7xl mx-auto">
       <Container>
         <div className="grid grid-cols-2 gap-2">
           <IntroductionText />

@@ -28,7 +28,7 @@ export const Items = ({ listItems }) => {
             </div>
 
             <div>
-              <div className="font-medium text-white text-center">
+              <div className="font-medium text-[#f1f1f1] text-center">
                 <h4 className="mt-2 text-xl sm:text-2xl">{title}</h4>
                 <p className="mt-2 text-sm sm:text-base line-clamp-4 break-words">
                   {description}
@@ -36,7 +36,7 @@ export const Items = ({ listItems }) => {
               </div>
               <Link
                 to={`/frontend/${path}`}
-                className="w-7 h-7 bg-[#212D5F] block rounded-[50px] text-white mx-auto mt-4"
+                className="w-7 h-7 bg-[#212D5F] block rounded-[50px] text-[#f1f1f1] mx-auto mt-4"
               >
                 <BiRightArrowAlt className="w-full h-full" />
               </Link>

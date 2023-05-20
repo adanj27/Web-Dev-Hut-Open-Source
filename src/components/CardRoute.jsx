@@ -34,14 +34,14 @@ export const CardRoute = () => {
               draggable="false"
             />
           </div>
-          <div className="text-white">
+          <div className="text-[#f1f1f1]">
             <h2 className="sm:text-2xl font-bold mt-2">{rout.title}</h2>
             <p className="font-normal my-2 text-base sm:text-lg">{rout.p}</p>
           </div>
           <div className="w-full flex justify-center text-2xl text-[#212D5F] p-2">
             <Link
               to={rout.to}
-              className="w-7 h-7 bg-[#212D5F] block rounded-[50px] text-white mx-auto sm:mt-4"
+              className="w-7 h-7 bg-[#212D5F] block rounded-[50px] text-[#f1f1f1] mx-auto sm:mt-4"
             >
               <BiRightArrowAlt className="w-full h-full" />
             </Link>

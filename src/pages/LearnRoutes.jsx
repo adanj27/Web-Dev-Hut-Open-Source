@@ -14,7 +14,7 @@ export default function LearnRoutes() {
   return (
     <div className="mx-auto">
       <Container className="relative z-10">
-        <div className="text-white flex-col my-16">
+        <div className="text-[#f1f1f1] flex-col my-16">
           <div className="grid grid-cols-2">
             <LearnRoutesText hideButton />
 

@@ -49,14 +49,8 @@ export function Navbar() {
           </li>
         </ul>
 
-        <div className="direct-child:inline-block direct-child:mr-10 last:direct-child:mr-0">
+        <div className="direct-child:inline-block direct-child:mr-2 last:direct-child:mr-0">
           <IconButton Icon={RiSearchLine} />
-          <IconButton
-            as="a"
-            href="https://discord.gg/Hmew77TY"
-            target="_blank"
-            Icon={BsDiscord}
-          />
         </div>
       </div>
     </nav>

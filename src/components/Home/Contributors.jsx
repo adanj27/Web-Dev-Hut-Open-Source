@@ -20,7 +20,7 @@ export const Contributors = () => {
   ]
 
   return (
-    <section className="my-10 text-center text-white">
+    <section className="my-10 text-center text-[#f1f1f1]">
       <h2 className="text-xl sm:text-2xl font-semibold">Colaboradores</h2>
       <p className="max-w-sm mx-auto py-5 text-base sm:text-lg">
         Nos gustaría agradecer a todos los colaboradores que han contribuido a
