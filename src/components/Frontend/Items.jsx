@@ -35,7 +35,7 @@ export const Items = ({ listItems }) => {
                 </p>
               </div>
               <Link
-                to={`/frontend/${path}`}
+                to={`/${path}`}
                 className="w-7 h-7 bg-[#212D5F] block rounded-[50px] text-[#f1f1f1] mx-auto mt-4"
               >
                 <BiRightArrowAlt className="w-full h-full" />
