@@ -9,7 +9,7 @@ export function About() {
       <section className="my-10 text-center text-[#f1f1f1] dark:text-[#f1f1f1]">
         <div className="container mx-auto px-12 py-10 ">
           <div className="text-center mt-16 my-10">
-            <Headline as="h4" size="md" className="mx-auto max-w-md">
+            <Headline as="h4" size="md" className="mx-auto">
               Acerca del Proyecto
             </Headline>
 
