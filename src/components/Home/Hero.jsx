@@ -16,7 +16,7 @@ export const Hero = () => {
               <Headline
                 as="h1"
                 size="xl"
-                className="sm:max-w-md bg-clip-text text-transparent dark:text-transparent bg-gradient-to-b from-[#961946] to-[#322C6F]"
+                className="bg-clip-text text-transparent dark:text-transparent bg-gradient-to-b from-[#961946] to-[#322C6F]"
               >
                 Explora el mundo del{' '}
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#FFBFBF]">
