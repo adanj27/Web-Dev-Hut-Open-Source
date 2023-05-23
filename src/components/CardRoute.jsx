@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
+
 import Frontend from '../assets/icons/frontend.svg'
 import Backend from '../assets/icons/backend.svg'
-import { Link } from 'react-router-dom'
+
+import { Headline, Paragraph } from './'
 
 export const CardRoute = () => {
   const routes = [
@@ -35,8 +38,10 @@ export const CardRoute = () => {
             />
           </div>
           <div className="text-[#f1f1f1]">
-            <h2 className="sm:text-2xl font-bold mt-2">{rout.title}</h2>
-            <p className="font-normal my-2 text-base sm:text-lg">{rout.p}</p>
+            <Headline as="h4" size="sm" className="mt-2">
+              {rout.title}
+            </Headline>
+            <Paragraph className="my-2">{rout.p}</Paragraph>
           </div>
           <div className="w-full flex justify-center text-2xl text-[#212D5F] p-2">
             <Link

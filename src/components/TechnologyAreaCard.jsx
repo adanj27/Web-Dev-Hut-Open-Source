@@ -1,4 +1,4 @@
-import { TechnologyItem } from './'
+import { Headline, TechnologyItem } from './'
 
 export function TechnologyAreaCard({
   title = 'title',
@@ -17,13 +17,15 @@ export function TechnologyAreaCard({
         {cardOrder === 0 && children}
 
         <div className={`${cardOrder === 0 ? '2lg:ml-6' : '2lg:mr-6'}`}>
-          <h4
-            className={`uppercase font-medium text-xl sm:text-2xl ${
+          <Headline
+            as="h4"
+            size="sm"
+            className={`uppercase ${
               cardOrder === 0 ? 'my-5 sm:mt-0 sm:mb-5' : 'mb-5'
             }`}
           >
             {title}
-          </h4>
+          </Headline>
 
           {technologies?.length > 0 && (
             <div>

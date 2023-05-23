@@ -1,6 +1,8 @@
 import { BiRightArrowAlt } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
+import { Headline, Paragraph } from './'
+
 export function Card({
   mainImage,
   iconImage,
@@ -35,10 +37,12 @@ export function Card({
 
       <div>
         <div className="font-medium text-[#f1f1f1] text-center">
-          <h4 className="mt-2 text-xl sm:text-2xl">{title}</h4>
-          <p className="mt-2 text-sm sm:text-base line-clamp-4 break-words">
+          <Headline as="h4" size="sm" className="mt-2 mx-auto">
+            {title}
+          </Headline>
+          <Paragraph className="mt-2 line-clamp-4 break-words">
             {description}
-          </p>
+          </Paragraph>
         </div>
 
         {to && (
