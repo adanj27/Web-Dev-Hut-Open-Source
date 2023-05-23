@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MdAltRoute } from 'react-icons/md'
 
-import { Button } from './'
+import { Button, Headline, Paragraph } from './'
 
 export function LearnRoutesText({
   className = '',
@@ -10,16 +10,16 @@ export function LearnRoutesText({
 }) {
   return (
     <div className={`text-[#f1f1f1] ${className}`} {...props}>
-      <p className="mb-3 sm:text-sm text-xs">
+      <Paragraph className="mb-3 sm:text-sm text-xs">
         ¿No estás seguro de qué camino tomar?
-      </p>
-      <h2 className="font-bold sm:text-5xl text-3xl max-w-xs">
+      </Paragraph>
+      <Headline as="h2" size="lg">
         Rutas de aprendizaje
-      </h2>
-      <p className="my-3 sm:text-lg text-md max-w-[245px]">
+      </Headline>
+      <Paragraph className="my-3 text-md max-w-[245px]">
         Aquí presentamos dos rutas de aprendizaje populares para el desarrollo
         web.
-      </p>
+      </Paragraph>
       {!hideButton && (
         <Link to="#">
           <Button as="span" icon={MdAltRoute}>
