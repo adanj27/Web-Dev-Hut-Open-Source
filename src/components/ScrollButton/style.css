@@ -1,25 +1,25 @@
 .toTop {
-	border: none;
-	display: flex;
-	cursor: pointer;
-	transition: opacity 0.3s, transform 0.3s;
-	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
-	z-index: 9999;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
 }
 
 .toTop svg {
-	stroke-width: 3px;
-	stroke: currentColor;
-	fill: none;
-	width: 24px;
+  stroke-width: 3px;
+  stroke: currentColor;
+  fill: none;
+  width: 24px;
 }
 
 .toTop {
-	background-color: #fff;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	border-radius: 0.5rem;
-	padding: 0.75rem;
-	color: #2738A4;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: #2738a4;
 }
