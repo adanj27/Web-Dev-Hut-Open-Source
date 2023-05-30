@@ -1,5 +1,6 @@
 import './App.css'
 import { Layer, Navbar, Footer } from './components'
+import ScrollToTopButtonComponent from './components/ScrollToTopButtonComponent/ScrollToTopButtonComponent'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Navbar />
       </Layer>
       <Footer />
+      <ScrollToTopButtonComponent />
     </>
   )
 }
