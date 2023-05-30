@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 
-export const ScrollToTopButtonComponent = () => {
+export const ScrollToTopButton = () => {
 	const [visible, setVisible] = useState(false)
 
 	const handleClick = () => {
@@ -26,4 +26,4 @@ export const ScrollToTopButtonComponent = () => {
 	)
 }
 
-export default ScrollToTopButtonComponent
+export default ScrollToTopButton
