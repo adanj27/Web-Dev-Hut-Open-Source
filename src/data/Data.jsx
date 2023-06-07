@@ -11,6 +11,14 @@ import apache from '../assets/cards/apache.png'
 import graphql from '../assets/cards/graphql.png'
 import java from '../assets/cards/java.png'
 import python from '../assets/cards/python.png'
+import visualstudio from '../assets/cards/visualstudio.png'
+import sublimetext from '../assets/cards/sublime.png'
+import npm from '../assets/cards/npm.png'
+import yarn from '../assets/cards/yarn.png'
+import arquitectura from '../assets/cards/arquitectura.png'
+import git from '../assets/cards/git.png'
+import jest from '../assets/cards/jest.png'
+import tuto from '../assets/cards/tuto.png'
 
 import Javascript from '../assets/icons/javascript.svg'
 import Typescript from '../assets/icons/typescript.svg'
@@ -25,6 +33,14 @@ import Sql from '../assets/icons/sql.svg'
 import Laravel from '../assets/icons/laravel.svg'
 import Apache from '../assets/icons/apache.svg'
 import Graphql from '../assets/icons/graphql.svg'
+import Visualstudio from '../assets/icons/visualcode.svg'
+import Sublimetext from '../assets/icons/sublimetext.svg'
+import Npm from '../assets/icons/npm.svg'
+import Yarn from '../assets/icons/yarn.svg'
+import Arquitectura from '../assets/icons/arquitectura.svg'
+import Git from '../assets/icons/git.svg'
+import Jest from '../assets/icons/jest.svg'
+import Tuto from '../assets/icons/tuto.svg'
 
 export const frontend = [
   {
@@ -159,5 +175,87 @@ export const backend = [
     path: 'backend/graphql',
     logo: Graphql,
     bg: graphql,
+  },
+]
+
+export const other = [
+  {
+    id: 1,
+    category: 'Editores de texto',
+    title: 'Visual Studio Code',
+    description:
+      'Visual Studio Code es un editor de texto de código abierto, por lo que cualquiera puede acceder al código del software para verlo, modificarlo y distribuirlo a su gusto',
+    path: 'other/visualstudio',
+    logo: Visualstudio,
+    bg: visualstudio,
+  },
+  {
+    id: 2,
+    category: 'Editores de texto',
+    title: 'Sublime Text',
+    description:
+      'Sublime Text es la mejor opción para un entorno de desarrollo completo, ya que agrupa código, marcado y prosa en una sola herramienta.',
+    path: 'other/sublimetext',
+    logo: Sublimetext,
+    bg: sublimetext,
+  },
+  {
+    id: 3,
+    category: 'Package manager',
+    title: 'NPM',
+    description:
+      'NPM se puede considerar como las siglas de Node Package Manager, es decir, gestor de paquetes de NodeJS, un entorno de ejecución multiplataforma para ejecutar Javascript no sólo en un navegador web',
+    path: 'other/npm',
+    logo: Npm,
+    bg: npm,
+  },
+  {
+    id: 4,
+    category: 'Package manager',
+    title: 'Yarn',
+    description:
+      'YARN es un gestor dependencias de JavaScript, que está enfocado en la velocidad y la seguridad',
+    path: 'other/yarn',
+    logo: Yarn,
+    bg: yarn,
+  },
+  {
+    id: 5,
+    category: 'Test',
+    title: 'Jest',
+    description:
+      'Amamos las iniciativas sin fines de lucro que promueven el crecimiento de la industria TI, y freeCodeCampes una de ellas.',
+    path: 'other/jest',
+    logo: Jest,
+    bg: jest,
+  },
+  {
+    id: 6,
+    category: 'Sistema de control de versiones',
+    title: 'Git',
+    description:
+      'Git es un sistema de control de versiones distribuido, lo que significa que un clon local del proyecto es un repositorio de control de versiones completo',
+    path: 'other/git',
+    logo: Git,
+    bg: git,
+  },
+  {
+    id: 7,
+    category: 'Conceptos y técnicas',
+    title: 'Arquitectura cliente-servidor',
+    description:
+      'Cliente-Servidor es uno de los estilos arquitectónicos distribuidos más conocidos, el cual está compuesto por dos componentes, el proveedor y el consumidor.',
+    logo: Arquitectura,
+    bg: arquitectura,
+  },
+  {
+    id: 8,
+    category: 'Recursos adicionales',
+    title: 'Tutoriales y guias de inicio rapido',
+    description:
+      'Amamos las iniciativas sin fines de lucro que promueven el crecimiento de la industria TI, y freeCodeCampes una de ellas.',
+    path: 'other/freecode',
+    logo: Tuto,
+    bg: tuto,
   },
 ]
