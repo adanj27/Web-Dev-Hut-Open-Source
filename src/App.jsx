@@ -1,8 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 
-import { Layer } from './components'
+import { Layer, ScrollButton } from './components'
 import { AppRouter } from './router/AppRouter'
-import ScrollButton from './components/ScrollButton/ScrollButton'
 
 function App() {
   return (
