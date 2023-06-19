@@ -5,7 +5,6 @@ import {
   Container,
   IntroductionText,
   Items,
-  SearchField,
   TechnologyIcons,
 } from '../components'
 
