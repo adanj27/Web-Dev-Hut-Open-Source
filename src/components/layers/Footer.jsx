@@ -39,11 +39,6 @@ export function Footer() {
 
         <ul className="direct-child:mb-10 [&_svg]:inline-block">
           <li>
-            <Link to="/contacto">
-              <MdContacts /> Contacto
-            </Link>
-          </li>
-          <li>
             <Link to="https://discord.gg/Hmew77TY" target="_blank">
               <BsDiscord /> Discord
             </Link>
@@ -57,7 +52,7 @@ export function Footer() {
             </Link>
           </li>
           <li>
-            <Link to="#">
+            <Link to="https://github.com/adanj27/Web-Dev-Hut-Open-Source/blob/main/LICENSE">
               <MdCardGiftcard /> Licencia
             </Link>
           </li>

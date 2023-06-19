@@ -5,7 +5,7 @@ import { Button, Headline, Paragraph } from '../'
 
 export function About() {
   return (
-    <main>
+    <main className="max-w-7xl mx-auto px-5">
       <section className="my-10 text-center text-[#f1f1f1] dark:text-[#f1f1f1]">
         <div className="container mx-auto px-12 py-10 ">
           <div className="text-center mt-16 my-10">
@@ -22,7 +22,7 @@ export function About() {
             </Paragraph>
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-8 md:mt-16 md:grid-cols-2 xl:grid-cols-2 sm:grid-cols-2 ">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 xl:grid-cols-2 sm:grid-cols-2 ">
           <div>
             <Paragraph className="mx-auto py-5">
               El proyecto en sí es un sitio web que ofrece recursos educativos y
@@ -52,12 +52,12 @@ export function About() {
               comunidad!{' '}
             </Paragraph>
             <div className="grid grid-flow-row max-w-sm mx-auto py-5 gap-24 md:grid-cols-2">
-              <Link to="#">
+              <Link to="https://discord.gg/DCrVhFydDW">
                 <Button as="span" icon={BsDiscord}>
                   Discord
                 </Button>
               </Link>
-              <Link to="#">
+              <Link to="https://github.com/adanj27/Web-Dev-Hut-Open-Source">
                 <Button as="span" icon={BsGithub}>
                   Github
                 </Button>
