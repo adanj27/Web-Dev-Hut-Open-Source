@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
+import frontendImage from '../assets/frontend.png'
+import backendImage from '../assets/backend.png'
+
 import {
   Button,
   Container,
   LearnRoutesText,
-  SearchField,
   TechnologyIcons,
 } from '../components'
 
@@ -31,17 +33,9 @@ export default function LearnRoutes() {
         </div>
         <div className="flex justify-center">
           {imgIndex == 0 ? (
-            <img
-              className={imgStyle}
-              src="src\assets\frontend.png"
-              alt="foto de ruta"
-            />
+            <img className={imgStyle} src={frontendImage} alt="foto de ruta" />
           ) : (
-            <img
-              className={imgStyle}
-              src="src\assets\backend.png"
-              alt="foto de ruta"
-            />
+            <img className={imgStyle} src={backendImage} alt="foto de ruta" />
           )}
         </div>
       </Container>
