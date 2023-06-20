@@ -9,7 +9,7 @@ export const Contributors = () => {
   const [collaborators, setCollaborators] = useState([])
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       const { contributors } = await getContributors()
       setCollaborators(contributors)
     })()

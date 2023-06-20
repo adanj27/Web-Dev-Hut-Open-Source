@@ -49,7 +49,7 @@ export const frontend = [
     title: 'JavaScript',
     description:
       'Lenguaje de programación de alto nivel, interpretado y orientado a objetos.',
-    path: 'frontend/javascript',
+    path: '/frontend/javascript',
     logo: Javascript,
     bg: javascript,
   },
@@ -59,7 +59,7 @@ export const frontend = [
     title: 'TypeScript',
     description:
       'Lenguaje de programación de alto nivel, interpretado y orientado a objetos.',
-    path: 'frontend/typescript',
+    path: '/frontend/typescript',
     logo: Typescript,
     bg: typescript,
   },
@@ -69,7 +69,7 @@ export const frontend = [
     title: 'HTML',
     description:
       '(HyperText Markup Language) es un lenguaje de marcado utilizado para estructurar y presentar contenido en la web.',
-    path: 'frontend/html',
+    path: '/frontend/html',
     logo: Html,
     bg: html,
   },
@@ -79,7 +79,7 @@ export const frontend = [
     title: 'Angular',
     description:
       'Framework web de código abierto basado en TypeScript para construir aplicaciones web de una sola página eficientes y escalables.',
-    path: 'frontend/angular',
+    path: '/frontend/angular',
     logo: Angular,
     bg: angular,
   },
@@ -89,7 +89,7 @@ export const frontend = [
     title: 'React',
     description:
       'Librería JavaScript de código abierto para construir interfaces de usuario interactivas y reutilizables en aplicaciones web de una sola página.',
-    path: 'frontend/react',
+    path: '/frontend/react',
     logo: React,
     bg: react,
   },
@@ -99,7 +99,7 @@ export const frontend = [
     title: 'Vite',
     description:
       'Herramienta de construcción rápida y ligera para aplicaciones web modernas con enfoque en la productividad y el rendimiento.',
-    path: 'frontend/vite',
+    path: '/frontend/vite',
     logo: Vite,
     bg: vite,
   },
@@ -112,7 +112,7 @@ export const backend = [
     title: 'Java',
     description:
       'Lenguaje de programación ampliamente utilizado conocido por su independencia de plataforma y su sólido soporte para la programación orientada a objetos.',
-    path: 'backend/java',
+    path: '/backend/java',
     logo: Java,
     bg: java,
   },
@@ -122,7 +122,7 @@ export const backend = [
     title: 'Python',
     description:
       'Lenguaje de programación versátil y fácil de aprender, con una sintaxis clara y legible, utilizado en diversos campos como desarrollo web',
-    path: 'backend/python',
+    path: '/backend/python',
     logo: Python,
     bg: python,
   },
@@ -132,7 +132,7 @@ export const backend = [
     title: 'Laravel',
     description:
       'Framework de desarrollo web en PHP que facilita la creación de aplicaciones robustas y escalables.',
-    path: 'backend/laravel',
+    path: '/backend/laravel',
     logo: Laravel,
     bg: laravel,
   },
@@ -142,7 +142,7 @@ export const backend = [
     title: 'Docker',
     description:
       'Plataforma de virtualización que permite crear, distribuir y ejecutar aplicaciones de forma independiente y portátil.',
-    path: 'backend/docker',
+    path: '/backend/docker',
     logo: Docker,
     bg: docker,
   },
@@ -152,7 +152,7 @@ export const backend = [
     title: 'MySql',
     description:
       'Sistema de gestión de bases de datos relacional de código abierto utilizado para almacenar y administrar datos.',
-    path: 'backend/mysql',
+    path: '/backend/mysql',
     logo: Sql,
     bg: sql,
   },
@@ -162,7 +162,7 @@ export const backend = [
     title: 'Apache',
     description:
       'Servidor web de código abierto ampliamente utilizado que permite alojar y entregar sitios web y aplicaciones en línea.',
-    path: 'backend/apache',
+    path: '/backend/apache',
     logo: Apache,
     bg: apache,
   },
@@ -172,7 +172,7 @@ export const backend = [
     title: 'GraphQL',
     description:
       'Lenguaje de consulta y un entorno de tiempo de ejecución para APIs que permite obtener datos de manera eficiente y precisa.',
-    path: 'backend/graphql',
+    path: '/backend/graphql',
     logo: Graphql,
     bg: graphql,
   },
@@ -185,7 +185,7 @@ export const other = [
     title: 'Visual Studio Code',
     description:
       'Visual Studio Code es un editor de texto de código abierto, por lo que cualquiera puede acceder al código del software para verlo, modificarlo y distribuirlo a su gusto',
-    path: 'other/visualstudio',
+    path: '/other/visualstudio',
     logo: Visualstudio,
     bg: visualstudio,
   },
@@ -195,7 +195,7 @@ export const other = [
     title: 'Sublime Text',
     description:
       'Sublime Text es la mejor opción para un entorno de desarrollo completo, ya que agrupa código, marcado y prosa en una sola herramienta.',
-    path: 'other/sublimetext',
+    path: '/other/sublimetext',
     logo: Sublimetext,
     bg: sublimetext,
   },
@@ -205,7 +205,7 @@ export const other = [
     title: 'NPM',
     description:
       'NPM se puede considerar como las siglas de Node Package Manager, es decir, gestor de paquetes de NodeJS, un entorno de ejecución multiplataforma para ejecutar Javascript no sólo en un navegador web',
-    path: 'other/npm',
+    path: '/other/npm',
     logo: Npm,
     bg: npm,
   },
@@ -215,7 +215,7 @@ export const other = [
     title: 'Yarn',
     description:
       'YARN es un gestor dependencias de JavaScript, que está enfocado en la velocidad y la seguridad',
-    path: 'other/yarn',
+    path: '/other/yarn',
     logo: Yarn,
     bg: yarn,
   },
@@ -225,7 +225,7 @@ export const other = [
     title: 'Jest',
     description:
       'Amamos las iniciativas sin fines de lucro que promueven el crecimiento de la industria TI, y freeCodeCampes una de ellas.',
-    path: 'other/jest',
+    path: '/other/jest',
     logo: Jest,
     bg: jest,
   },
@@ -235,7 +235,7 @@ export const other = [
     title: 'Git',
     description:
       'Git es un sistema de control de versiones distribuido, lo que significa que un clon local del proyecto es un repositorio de control de versiones completo',
-    path: 'other/git',
+    path: '/other/git',
     logo: Git,
     bg: git,
   },
@@ -254,7 +254,7 @@ export const other = [
     title: 'Tutoriales y guias de inicio rapido',
     description:
       'Amamos las iniciativas sin fines de lucro que promueven el crecimiento de la industria TI, y freeCodeCampes una de ellas.',
-    path: 'other/freecode',
+    path: '/other/freecode',
     logo: Tuto,
     bg: tuto,
   },
