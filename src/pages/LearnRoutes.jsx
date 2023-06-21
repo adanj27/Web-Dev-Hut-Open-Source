@@ -10,7 +10,7 @@ import {
   TechnologyIcons,
 } from '../components'
 
-export default function LearnRoutes() {
+export function LearnRoutes() {
   const imgStyle = 'rounded-lg z-50 my-20 shadow-md min-w-full min-h-full'
   const [imgIndex, setImgIndex] = useState(0)
   return (
