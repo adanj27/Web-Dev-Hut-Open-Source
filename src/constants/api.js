@@ -5,6 +5,7 @@ export const API = {
     GUIDES: '/courses',
     GUIDES_BY_TECHNOLOGY: (technology) => `/courses/${technology}`,
     GUIDE_BY_IDENTIFIER: (identifier) => `/course/${identifier}`,
+    TECHNOLOGY_BY_NAME: (name) => `/technology/${name}`,
   },
   TIMEOUT: 8000,
 }

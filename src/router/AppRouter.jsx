@@ -7,15 +7,12 @@ import {
   Backend,
   Other,
   Error404,
-  Php,
   VisualStudioCode,
   Technology,
   GuideByIdentifier,
 } from '../pages'
 
 export const AppRouter = () => {
-  const backendRoutes = [{ path: '/php', element: <Php /> }]
-
   const otherRoutes = [
     { path: '/visual-studio-code', element: <VisualStudioCode /> },
   ]
@@ -26,15 +23,9 @@ export const AppRouter = () => {
       <Route path="/rutas" element={<LearnRoutes />} />
       <Route path="/frontend" element={<Frontend />} />
       <Route path="/frontend/:name" element={<Technology />} />
-      <Route path="/:technology/guides/:guideIdentifier" element={<GuideByIdentifier />} />
       <Route path="/backend" element={<Backend />} />
-      {backendRoutes.map((route) => (
-        <Route
-          key={route.path}
-          path={`/backend${route.path}`}
-          element={route.element}
-        />
-      ))}
+      <Route path="/backend/:name" element={<Technology />} />
+      <Route path="/guias/:guideIdentifier/:lessonIdentifier" element={<GuideByIdentifier />} />
       <Route path="/otros-recursos" element={<Other />} />
       {otherRoutes.map((route) => (
         <Route
