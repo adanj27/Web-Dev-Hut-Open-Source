@@ -28,8 +28,11 @@ export function Guide() {
 
     // Guide found, no lesson specified
     if (!lessonIdentifier) {
-      const firstLessonIdentifier = data.lessons[0].identifier
-      return navigate(`/guias/${guideIdentifier}/${firstLessonIdentifier}`)
+      const firstLesson = data.lessons[0]
+      // Lesson does not exist or it has no content
+      if (!firstLesson || !firstLesson.content) return setGuide(null)
+
+      return navigate(`/guias/${guideIdentifier}/${firstLesson.identifier}`)
     }
 
     const fetchedLesson = fetchLesson(lessonIdentifier)
