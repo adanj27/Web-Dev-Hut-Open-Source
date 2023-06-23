@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 export const useAlert = (options = {}) => {
   const cfg = {
-    position: 'top-right',
+    position: 'bottom-left',
     theme: 'dark',
     ...options,
   }

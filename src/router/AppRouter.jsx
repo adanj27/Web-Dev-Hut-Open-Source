@@ -9,7 +9,7 @@ import {
   Error404,
   VisualStudioCode,
   Technology,
-  GuideByIdentifier,
+  Guide,
 } from '../pages'
 
 export const AppRouter = () => {
@@ -25,7 +25,7 @@ export const AppRouter = () => {
       <Route path="/frontend/:name" element={<Technology />} />
       <Route path="/backend" element={<Backend />} />
       <Route path="/backend/:name" element={<Technology />} />
-      <Route path="/guias/:guideIdentifier/:lessonIdentifier" element={<GuideByIdentifier />} />
+      <Route path="/guias/:guideIdentifier/:lessonIdentifier?" element={<Guide />} />
       <Route path="/otros-recursos" element={<Other />} />
       {otherRoutes.map((route) => (
         <Route

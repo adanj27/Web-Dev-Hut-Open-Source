@@ -1,58 +1,67 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import ReactMarkdown from "react-markdown"
 
 import { useAlert } from "../hooks"
-import { Guides, Repository } from '../services'
+import { Guides, Lesson } from '../services'
 import { Container, Headline, Loading } from '../components'
 
-export function GuideByIdentifier() {
+export function Guide() {
+  const navigate = useNavigate()
   const { guideIdentifier, lessonIdentifier } = useParams()
   const { AlertContainer, alert } = useAlert()
   const [guide, setGuide] = useState({})
   const [lesson, setLesson] = useState({})
   const [err, setErr] = useState('')
 
-  const setError = (error) => {
+  const showError = (error) => {
     setErr(error)
     alert.error(error)
   }
 
   const fetchGuide = async () => {
     const { data, error } = await Guides.getByIdentifier(guideIdentifier)
-    if (error) setError(error)
+    if (error) showError(error)
+
+    // Guide not found, set to null
     if (!data) return setGuide(null)
 
-    // TODO: Fetch lesson with params name
-    const fetchedLesson = fetchLesson(lessonIdentifier.toLowerCase() + '.md')
+    // Guide found, no lesson specified
+    if (!lessonIdentifier) {
+      const firstLessonIdentifier = data.lessons[0].identifier
+      return navigate(`/guias/${guideIdentifier}/${firstLessonIdentifier}`)
+    }
+
+    const fetchedLesson = fetchLesson(lessonIdentifier)
     if (!fetchedLesson) return setGuide(null)
 
     setGuide(data)
     return data
   }
 
-  const fetchLesson = async (fileName) => {
-    const { data, error } = await Repository.getLessonContent(fileName)
-    if (error) setError(error)
-    if (!data) setLesson(null)
+  const fetchLesson = async (identifier) => {
+    const { data, error } = await Lesson.getByIdentifier(identifier)
+    if (error) showError(error)
+    if (!data || !data.content) return setLesson(null)
 
     setLesson(data)
     return data
   }
 
   useEffect(() => {
+    setLesson({}) // trigger loading
     fetchGuide()
-  }, [])
-
-  console.log({ lesson })
+  }, [lessonIdentifier])
 
   return (
     <Container className="my-16">
+      {guide && lesson && Object.entries(lesson).length === 0 && !err ? <Loading /> : null}
+
       {err && <AlertContainer />}
-
-      {(guide && Object.entries(guide).length === 0 && !err) && <Loading />}
-
-      {(!guide || guide?.lessons?.length === 0 || err) && <Headline size="sm">No hay nada para mostrar</Headline>}
+      
+      {!guide || !lesson || err ? (
+        <Headline size="sm">No hay contenido para mostrar</Headline>
+      ) : null}
 
       {lesson && Object.entries(lesson).length > 0 && (
         <>
@@ -63,11 +72,11 @@ export function GuideByIdentifier() {
                 {guide.lessons?.map((lesson) => {
                   return (
                     <li key={lesson._id} className="text-white mb-2">
-                      <a
-                        href={`/guias/${guide.identifier}/${lesson.identifier}`}
+                      <Link
+                        to={`/guias/${guide.identifier}/${lesson.identifier}`}
                         className={lessonIdentifier.toLowerCase() === lesson.identifier ? 'underline' : ''}>
                         {lesson.name}
-                      </a>
+                      </Link>
                     </li>
                   )
                 })}
@@ -75,9 +84,7 @@ export function GuideByIdentifier() {
             </aside>
           
             <article className="flex-[0.7] pl-10">
-              {lesson?.content && (
-                <ReactMarkdown className="text-[#f1f1f1]">{atob(lesson.content)}</ReactMarkdown>
-              )}
+              <ReactMarkdown className="text-[#f1f1f1]">{lesson.content}</ReactMarkdown>
             </article>          
           </div>
         </>
