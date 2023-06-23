@@ -11,17 +11,17 @@ export const Technology = () => {
 
   const [guides, setGuides] = useState([])
   const [err, setErr] = useState('')
-  
+
   const showError = (error) => {
     setErr(error)
     alert.error(error)
   }
-  
+
   const fetchGuides = async () => {
-    const { data, error } = await Guides.getByTechnology(name) ?? {}
+    const { data, error } = (await Guides.getByTechnology(name)) ?? {}
     if (error) showError(error)
     if (data?.length === 0) return setGuides(null)
-    
+
     setGuides(data)
     return data
   }
@@ -42,9 +42,7 @@ export const Technology = () => {
 
       {guides?.length > 0 && (
         <>
-          <Headline
-            size="sm"
-            className="mb-5">
+          <Headline size="sm" className="mb-5">
             Guías para "{name}"
           </Headline>
 
@@ -63,7 +61,7 @@ export const Technology = () => {
             })}
           </div>
         </>
-      )} 
+      )}
     </Container>
   )
 }
