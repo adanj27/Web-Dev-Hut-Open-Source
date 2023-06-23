@@ -29,9 +29,7 @@ export function Guide() {
     // Guide found, no lesson specified
     if (!lessonIdentifier) {
       const firstLesson = data.lessons[0]
-      // Lesson does not exist or it has no content
-      if (!firstLesson || !firstLesson.content) return setGuide(null)
-
+      if (!firstLesson) return setGuide(null)
       return navigate(`/guias/${guideIdentifier}/${firstLesson.identifier}`)
     }
 
@@ -45,22 +43,19 @@ export function Guide() {
   const fetchLesson = async (identifier) => {
     const { data, error } = await Lesson.getByIdentifier(identifier)
     if (error) showError(error)
-    if (!data || !data.content) return setLesson(null)
+    if (!data) return setLesson(null)
 
     setLesson(data)
     return data
   }
 
   useEffect(() => {
-    setLesson({}) // trigger loading
     fetchGuide()
   }, [lessonIdentifier])
 
   return (
     <Container className="my-16">
-      {guide && lesson && Object.entries(lesson).length === 0 && !err ? (
-        <Loading />
-      ) : null}
+      {guide && Object.entries(guide).length === 0 && !err ? <Loading /> : null}
 
       {err && <AlertContainer />}
 
@@ -68,7 +63,9 @@ export function Guide() {
         <Headline size="sm">No hay contenido para mostrar</Headline>
       ) : null}
 
-      {lesson && Object.entries(lesson).length > 0 && (
+      {guide?.lessons?.length > 0 &&
+      lesson &&
+      Object.entries(lesson).length > 0 ? (
         <>
           <Headline size="sm" className="max-w-xl mb-4">
             Guías | {guide.name}
@@ -95,14 +92,22 @@ export function Guide() {
               </ul>
             </aside>
 
-            <article className="flex-[0.7] pl-10">
-              <ReactMarkdown className="text-[#f1f1f1]">
-                {lesson.content}
-              </ReactMarkdown>
-            </article>
+            <div className="flex-[0.7] pl-10">
+              {lesson?.content ? (
+                <article>
+                  <ReactMarkdown className="text-[#f1f1f1]">
+                    {lesson.content}
+                  </ReactMarkdown>
+                </article>
+              ) : (
+                <Headline size="sm">
+                  No hay contenido para esta sección
+                </Headline>
+              )}
+            </div>
           </div>
         </>
-      )}
+      ) : null}
     </Container>
   )
 }
