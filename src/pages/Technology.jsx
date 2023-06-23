@@ -26,6 +26,11 @@ export const Technology = () => {
     return data
   }
 
+  const atLeastOneLesson = (guides) => {
+    if (guides?.length === 0) return true
+    return guides.some((guide) => guide.lessons?.length > 0)
+  }
+
   useEffect(() => {
     fetchGuides()
   }, [])
@@ -34,13 +39,13 @@ export const Technology = () => {
     <Container>
       {guides?.length === 0 && !err ? <Loading /> : null}
 
-      {!guides || err ? (
+      {!guides || !atLeastOneLesson(guides) || err ? (
         <Headline size="sm">No hay guías para mostrar</Headline>
       ) : null}
 
       {err && <AlertContainer />}
 
-      {guides?.length > 0 && (
+      {guides?.length > 0 && atLeastOneLesson(guides) && (
         <>
           <Headline size="sm" className="mb-5">
             Guías para "{name}"
@@ -48,7 +53,7 @@ export const Technology = () => {
 
           <div className="flex items-start justify-start flex-wrap gap-4">
             {guides.map((guide) => {
-              if (guide.lessons?.length === 0) return
+              if (guide.lessons.length === 0) return
               return (
                 <GuideCard
                   key={guide._id}
