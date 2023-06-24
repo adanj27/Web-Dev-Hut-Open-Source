@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body {
+    @apply min-h-full;
+  }
+
   body {
     @apply font-body;
   }
