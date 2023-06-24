@@ -20,7 +20,7 @@ export const ScrollButton = () => {
     <button
       className={`${
         !visible ? 'opacity-0' : ''
-      } border-none flex cursor-pointer fixed bottom-[1rem] right-[1rem] z-[9999] bg-white rounded-3xl p-2 text-[#2738a4] shadow-md transition transition-duration-300 motion-reduce:transition-none`}
+      } border-none flex cursor-pointer fixed bottom-[1rem] right-[1rem] z-30 bg-white rounded-3xl p-2 text-[#2738a4] shadow-md transition transition-duration-300 motion-reduce:transition-none`}
       onClick={handleClick}
     >
       <svg
