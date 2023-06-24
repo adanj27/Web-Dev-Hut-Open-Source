@@ -12,10 +12,8 @@ export function Navbar() {
   const toggleMenu = () => setMenuOpened((x) => !x)
 
   return (
-    <nav className="relative z-40 flex items-center justify-between text-[#D9D9D9] text-lg max-w-7xl mx-auto py-10 px-5">
-      <div>
-        <Logo />
-      </div>
+    <nav className="relative z-40 flex items-center justify-between text-[#D9D9D9] text-lg w-full max-w-7xl mx-auto py-10 px-5">
+      <Logo />
 
       <div className="fixed z-50 xl:hidden top-11 right-5">
         <IconButton
