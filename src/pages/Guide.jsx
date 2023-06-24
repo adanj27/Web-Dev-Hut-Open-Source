@@ -71,18 +71,18 @@ export function Guide() {
             Guías | {guide.name}
           </Headline>
           <div className="flex justify-between items-stretch flex-wrap">
-            <aside className="flex-[0.3] relative before:content-[''] before:w-[1px] before:h-full before:absolute before:right-0 before:top-0 before:bg-[#f1f1f1]">
-              <ul>
+            <aside className="flex-[0.3] max-w-[30%] break-all relative">
+              <ul className="py-3 bg-[#A2A2A2]/20 rounded-xl">
                 {guide.lessons?.map((lesson) => {
                   return (
-                    <li key={lesson._id} className="text-white mb-2">
+                    <li key={lesson._id}>
                       <Link
-                        to={`/guias/${guide.identifier}/${lesson.identifier}`}
-                        className={
+                        className={`block w-full py-0.5 px-2 text-white text-sm font-medium ${
                           lessonIdentifier.toLowerCase() === lesson.identifier
-                            ? 'underline'
+                            ? 'bg-[#3D53A1]'
                             : ''
-                        }
+                        }`}
+                        to={`/guias/${guide.identifier}/${lesson.identifier}`}
                       >
                         {lesson.name}
                       </Link>
