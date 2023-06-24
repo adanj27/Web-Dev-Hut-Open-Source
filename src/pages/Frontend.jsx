@@ -38,7 +38,7 @@ export const Frontend = () => {
           </div>
         </div>
 
-        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-6 grid-cols-3 gap-2 items-start">
+        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-7 grid-cols-3 gap-2 items-start area">
           {list.map((category, index) => (
             <Button
               key={index}

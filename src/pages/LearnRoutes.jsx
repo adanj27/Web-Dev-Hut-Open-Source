@@ -26,7 +26,7 @@ export function LearnRoutes() {
               </div>
             </div>
           </div>
-          <div className="flex grid-cols-2 gap-10 justify-center my-5">
+          <div className="flex grid-cols-2 gap-10 justify-center items-start my-5 area area2">
             <Button onClick={() => setImgIndex(0)}>Frontend</Button>
             <Button onClick={() => setImgIndex(1)}>Backend</Button>
           </div>

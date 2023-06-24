@@ -38,7 +38,7 @@ export const Backend = () => {
           </div>
         </div>
 
-        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-6 grid-cols-3 gap-2 items-start">
+        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-7 grid-cols-3 gap-2 items-start area">
           {list.map((category, index) => (
             <Button
               key={index}
@@ -50,6 +50,7 @@ export const Backend = () => {
               {category}
             </Button>
           ))}
+          <div className='start-btn'></div>
         </div>
 
         <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 justify-center xl:justify-between sm:gap-8 gap-5 sm:direct-child:mb-8">
