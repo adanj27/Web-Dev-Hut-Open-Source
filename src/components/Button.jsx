@@ -9,10 +9,7 @@ export function Button({
   const As = as
 
   return (
-    <As
-      className={` ${className}`}
-      {...props}
-    >
+    <As className={` ${className}`} {...props}>
       {Icon && (
         <Icon className="inline-block text-[#3D3D3D] w-5 h-5 align-middle -mt-[.1rem] mr-2" />
       )}

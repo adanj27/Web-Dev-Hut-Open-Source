@@ -45,7 +45,7 @@ export const Frontend = () => {
               onClick={() => {
                 filterItems(category)
               }}
-              className="xl:w-[180px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] w-[110px] leading-4"
+              className="xl:w-[180px] xl:h-[55px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] w-[110px] leading-4"
             >
               {category}
             </Button>
