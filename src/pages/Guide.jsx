@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import { useAlert } from '../hooks'
 import { Guides, Lesson } from '../services'
@@ -95,9 +97,32 @@ export function Guide() {
             <div className="flex-[0.7] pl-10">
               {lesson?.content ? (
                 <article>
-                  <ReactMarkdown className="text-[#f1f1f1]">
-                    {lesson.content}
-                  </ReactMarkdown>
+                  <ReactMarkdown
+                    className="text-[#f1f1f1]"
+                    children={lesson.content}
+                    components={{
+                      code({ node, inline, className, children, ...props }) {
+                        const match = /language-(\w+)/.exec(className || '')
+                        return !inline && match ? (
+                          <SyntaxHighlighter
+                            {...props}
+                            children={String(children).replace(/\n$/, '')}
+                            style={coldarkDark}
+                            customStyle={{
+                              background: 'transparent',
+                            }}
+                            language={match[1]}
+                            PreTag="div"
+                            showLineNumbers
+                          />
+                        ) : (
+                          <code {...props} className={className}>
+                            {children}
+                          </code>
+                        )
+                      },
+                    }}
+                  />
                 </article>
               ) : (
                 <Headline size="sm">
