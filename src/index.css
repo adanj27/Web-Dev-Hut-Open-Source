@@ -42,7 +42,7 @@
   }
 
   pre {
-    @apply bg-[#D9D9D9]/20 border-l-4 border-[#00BBE4] rounded-md p-4;
+    @apply bg-[#272727]/50 border-l-4 border-[#00BBE4] rounded-md p-4;
   }
 
   code:not(pre code) {
