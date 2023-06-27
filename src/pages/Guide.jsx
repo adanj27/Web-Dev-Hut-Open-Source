@@ -110,6 +110,8 @@ export function Guide() {
                             style={coldarkDark}
                             customStyle={{
                               background: 'transparent',
+                              padding: 0,
+                              margin: 0,
                             }}
                             language={match[1]}
                             PreTag="div"
