@@ -49,3 +49,17 @@
     @apply bg-[#7D7D7D]/50 px-1;
   }
 }
+
+@layer utilities {
+  .area button {
+    @apply uppercase outline-none bg-transparent text-white inline-block cursor-pointer text-[12px]  border-b-4 border-b-white border-[none] border-solid focus:text-[#40C18A] focus:transition-[1s] focus:duration-[ease-in-out] focus:border-[#40C18A] hover:text-[#40C18A] hover:border-[#40C18A] font-bold tracking-wide;
+  }
+
+  .area button:not(:last-of-type) {
+    @apply mb-2;
+  }
+
+  .area2 button {
+    @apply w-24 -mr-10;
+  }
+}

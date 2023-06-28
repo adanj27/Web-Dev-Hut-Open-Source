@@ -38,14 +38,14 @@ export const Frontend = () => {
           </div>
         </div>
 
-        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-6 grid-cols-3 gap-2 items-start">
+        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-6 grid-cols-3 gap-2 items-start area">
           {list.map((category, index) => (
             <Button
               key={index}
               onClick={() => {
                 filterItems(category)
               }}
-              className="xl:w-[180px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] w-[110px] leading-4"
+              className="xl:w-[200px] xl:h-[55px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] leading-4"
             >
               {category}
             </Button>
