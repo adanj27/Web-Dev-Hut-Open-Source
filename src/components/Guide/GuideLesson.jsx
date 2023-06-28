@@ -2,12 +2,17 @@ import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-import { Headline } from '../'
+import { Headline, Loading } from '../'
 
-export function GuideLesson({ lesson, className = '', ...props }) {
+export function GuideLesson({
+  lesson,
+  loadingLesson,
+  className = '',
+  ...props
+}) {
   return (
     <div className={`w-full xl:w-[70%] ${className}`} {...props}>
-      {lesson?.content ? (
+      {!loadingLesson && lesson?.content ? (
         <article>
           <ReactMarkdown
             className="text-[#f1f1f1]"
@@ -38,9 +43,13 @@ export function GuideLesson({ lesson, className = '', ...props }) {
             }}
           />
         </article>
-      ) : (
+      ) : null}
+
+      {loadingLesson && <Loading />}
+
+      {!lesson.content && !loadingLesson ? (
         <Headline size="sm">No hay contenido para esta sección</Headline>
-      )}
+      ) : null}
     </div>
   )
 }
