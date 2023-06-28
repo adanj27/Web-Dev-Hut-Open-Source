@@ -45,7 +45,7 @@ export const Backend = () => {
               onClick={() => {
                 filterItems(category)
               }}
-              className="xl:w-[190px] xl:h-[55px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] w-[110px] leading-4"
+              className="xl:w-[210px] xl:h-[55px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] w-[110px] leading-4"
             >
               {category}
             </Button>
