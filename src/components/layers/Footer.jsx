@@ -54,7 +54,10 @@ export function Footer({ className = '', ...props }) {
             </Link>
           </li>
           <li>
-            <Link to="https://github.com/adanj27/Web-Dev-Hut-Open-Source/blob/main/LICENSE">
+            <Link
+              to="https://github.com/adanj27/Web-Dev-Hut-Open-Source/blob/main/LICENSE"
+              target="_blank"
+            >
               <MdCardGiftcard /> Licencia
             </Link>
           </li>
@@ -62,8 +65,8 @@ export function Footer({ className = '', ...props }) {
       </section>
 
       <section className="mt-5 text-center xl:mt-0 direct-child:mb-5 last:direct-child:mb-0 text-md">
-        <p>Sitio creado con React.js, Vite, Tailwind, Json-Server.</p>
-        <p>Web Dev v.0.1.0 &copy; 2023</p>
+        <p>Sitio creado con React, Vite, Tailwind.</p>
+        <p>Web Dev Hut v.0.1.0 &copy; 2023</p>
 
         <div className="direct-child:ml-2 first:direct-child:ml-0">
           <Link to="#">Términos y condiciones del servicio</Link>
