@@ -17,6 +17,7 @@ export function Guide() {
   const { AlertContainer, alert } = useAlert()
   const [guide, setGuide] = useState({})
   const [lesson, setLesson] = useState({})
+  const [loadingLesson, setLoadingLesson] = useState(false)
   const [err, setErr] = useState('')
 
   const showError = (error) => {
@@ -54,11 +55,13 @@ export function Guide() {
     if (error) showError(error)
     if (!data) return setLesson(null)
 
+    setLoadingLesson(false)
     setLesson(data)
     return data
   }
 
   useEffect(() => {
+    setLoadingLesson(true)
     fetchGuide()
   }, [lessonIdentifier])
 
@@ -84,7 +87,7 @@ export function Guide() {
 
           <div className="flex justify-between items-stretch flex-wrap gap-10">
             <GuideSidebar guide={guide} lessonIdentifier={lessonIdentifier} />
-            <GuideLesson lesson={lesson} />
+            <GuideLesson lesson={lesson} loadingLesson={loadingLesson} />
           </div>
         </>
       ) : null}
