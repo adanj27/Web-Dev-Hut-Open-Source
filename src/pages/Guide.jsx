@@ -25,8 +25,12 @@ export function Guide() {
     const { data, error } = await Guides.getByIdentifier(guideIdentifier)
     if (error) showError(error)
 
-    // Guide not found, set to null
-    if (!data) return setGuide(null)
+    // Guide not found, set guide and lesson to null
+    if (!data) {
+      setGuide(null)
+      setLesson(null)
+      return
+    }
 
     // Guide found, no lesson specified
     if (!lessonIdentifier) {
@@ -57,7 +61,9 @@ export function Guide() {
 
   return (
     <Container className="my-16">
-      {guide && Object.entries(guide).length === 0 && !err ? <Loading /> : null}
+      {lesson && Object.entries(lesson).length === 0 && !err ? (
+        <Loading />
+      ) : null}
 
       {err && <AlertContainer />}
 
@@ -72,8 +78,8 @@ export function Guide() {
           <Headline size="sm" className="max-w-xl mb-4">
             Guías | {guide.name}
           </Headline>
-          <div className="flex justify-between items-stretch flex-wrap">
-            <aside className="flex-[0.3] max-w-[30%] break-all relative">
+          <div className="flex justify-between items-stretch flex-wrap gap-10">
+            <aside className="w-[300px] max-w-full break-all relative">
               <ul className="py-3 bg-[#A2A2A2]/20 rounded-xl">
                 {guide.lessons?.map((lesson) => {
                   return (
@@ -94,7 +100,7 @@ export function Guide() {
               </ul>
             </aside>
 
-            <div className="flex-[0.7] pl-10">
+            <div className="w-full xl:w-[70%]">
               {lesson?.content ? (
                 <article>
                   <ReactMarkdown
