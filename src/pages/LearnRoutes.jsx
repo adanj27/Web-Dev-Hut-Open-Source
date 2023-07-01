@@ -4,7 +4,7 @@ import frontendImage from '../assets/frontend.png'
 import backendImage from '../assets/backend.png'
 
 import {
-  Button,
+  FilterButton,
   Container,
   LearnRoutesText,
   TechnologyIcons,
@@ -26,9 +26,9 @@ export function LearnRoutes() {
               </div>
             </div>
           </div>
-          <div className="flex grid-cols-2 gap-10 justify-center items-start my-5 area area2">
-            <Button onClick={() => setImgIndex(0)}>Frontend</Button>
-            <Button onClick={() => setImgIndex(1)}>Backend</Button>
+          <div className="flex grid-cols-2 justify-center items-start my-5">
+            <FilterButton onClick={() => setImgIndex(0)}>Frontend</FilterButton>
+            <FilterButton onClick={() => setImgIndex(1)}>Backend</FilterButton>
           </div>
         </div>
         <div className="flex justify-center">

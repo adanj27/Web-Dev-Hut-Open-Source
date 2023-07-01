@@ -168,7 +168,7 @@ export const backend = [
   },
   {
     id: 7,
-    category: 'APIs',
+    category: 'API',
     title: 'GraphQL',
     description:
       'Lenguaje de consulta y un entorno de tiempo de ejecución para APIs que permite obtener datos de manera eficiente y precisa.',
