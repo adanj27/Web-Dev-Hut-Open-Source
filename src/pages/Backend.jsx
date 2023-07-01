@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import {
-  Button,
+  FilterButton,
   Container,
   IntroductionText,
   Items,
@@ -38,19 +38,17 @@ export const Backend = () => {
           </div>
         </div>
 
-        <div className="my-16 max-w-6xl mx-auto grid sm:grid-cols-7 grid-cols-3 gap-2 items-start area">
+        <div className="my-16 max-w-6xl mx-auto flex flex-wrap justify-center items-start">
           {list.map((category, index) => (
-            <Button
+            <FilterButton
               key={index}
               onClick={() => {
                 filterItems(category)
               }}
-              className="xl:w-[210px] xl:h-[55px] md:text-base lg:w-[160px] md:w-[130px] sm:w-[100px] text-[9px] w-[110px] leading-4"
             >
               {category}
-            </Button>
+            </FilterButton>
           ))}
-          <div className="start-btn"></div>
         </div>
 
         <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 justify-center xl:justify-between sm:gap-8 gap-5 sm:direct-child:mb-8">
