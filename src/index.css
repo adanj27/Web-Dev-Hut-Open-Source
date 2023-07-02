@@ -41,8 +41,8 @@
     @apply list-disc ml-4;
   }
 
-  pre {
-    @apply bg-[#272727]/50 border-l-4 border-[#00BBE4] rounded-md p-4;
+  pre code {
+    @apply bg-[#272727]/50 p-4 inline-block border-l-4 border-[#00BBE4] rounded-md;
   }
 
   code:not(pre code) {
