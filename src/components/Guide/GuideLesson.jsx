@@ -36,13 +36,9 @@ export function GuideLesson({
                 const match = /language-(\w+)/.exec(className || '')
                 return !inline && match ? (
                   <>
-                    <IconButton
-                      icon={MdContentCopy}
-                      className="[&>svg]:text-white/50 hover:[&>svg]:text-white ml-auto block"
-                      onClick={() => copyCode(children)}
-                    />
                     <SyntaxHighlighter
                       {...props}
+                      className="code-box"
                       children={String(children).replace(/\n$/, '')}
                       style={coldarkDark}
                       customStyle={{
@@ -52,6 +48,11 @@ export function GuideLesson({
                       language={match[1]}
                       PreTag="div"
                       showLineNumbers
+                    />
+                    <IconButton
+                      icon={MdContentCopy}
+                      className="copy-code-button"
+                      onClick={() => copyCode(children)}
                     />
                   </>
                 ) : (
