@@ -41,8 +41,12 @@
     @apply list-disc ml-4;
   }
 
-  pre code {
-    @apply bg-[#272727]/50 p-4 inline-block border-l-4 border-[#00BBE4] rounded-md;
+  pre {
+    @apply bg-[#111b27] inline-block border-l-4 border-[#00BBE4] rounded-md flex justify-start items-start overflow-hidden;
+  }
+
+  pre .code-box {
+    @apply bg-[#0c141c] p-4 w-full !important;
   }
 
   code:not(pre code) {
@@ -51,6 +55,10 @@
 }
 
 @layer utilities {
+  .copy-code-button {
+    @apply [&>svg]:text-white/50 [&>svg]:hover:text-white inline-block py-2;
+  }
+
   .filter-button {
     @apply uppercase outline-none bg-transparent text-white inline-block cursor-pointer text-sm  border-b-4 border-b-white border-[none] border-solid focus:text-[#40C18A] focus:transition-[1s] focus:duration-[ease-in-out] focus:border-[#40C18A] hover:text-[#40C18A] hover:border-[#40C18A] font-bold tracking-wide mb-2 py-2 px-5;
   }
