@@ -8,5 +8,5 @@ export const API = {
     LESSON_BY_IDENTIFIER: (identifier) => `/lesson/${identifier}`,
     TECHNOLOGY_BY_NAME: (name) => `/technology/${name}`,
   },
-  TIMEOUT: 8000,
+  TIMEOUT: 15000,
 }

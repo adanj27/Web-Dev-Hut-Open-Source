@@ -20,12 +20,12 @@ export function GuideCard({
           src={thumbnail}
           alt={title}
           draggable={false}
-          className="select-none pointer-events-none rounded-xl h-[120px] object-cover"
+          className="select-none pointer-events-none rounded-xl w-full h-[120px] object-cover"
         />
         <Headline as="h3" size="sm" className="mt-4">
           {title}
         </Headline>
-        <Paragraph className="sm:text-sm mt-1">{description}</Paragraph>
+        <Paragraph className="mt-1">{description}</Paragraph>
       </Link>
     </div>
   )
