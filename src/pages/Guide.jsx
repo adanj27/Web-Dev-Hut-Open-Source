@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { useAlert } from '../hooks'
-import { Guides, Lesson } from '../services'
+import { Guides, Lessons } from '../services'
 import {
   Container,
   GuideLesson,
@@ -15,7 +15,7 @@ import {
 export function Guide() {
   const navigate = useNavigate()
   const { guideIdentifier, lessonIdentifier } = useParams()
-  const { AlertContainer, alert } = useAlert()
+  const { alert } = useAlert()
   const [guide, setGuide] = useState({})
   const [lesson, setLesson] = useState({})
   const [loadingLesson, setLoadingLesson] = useState(false)
@@ -52,7 +52,7 @@ export function Guide() {
   }
 
   const fetchLesson = async (identifier) => {
-    const { data, error } = await Lesson.getByIdentifier(identifier)
+    const { data, error } = await Lessons.getByIdentifier(identifier)
     if (error) showError(error)
     if (!data) return setLesson(null)
 
@@ -72,8 +72,6 @@ export function Guide() {
         {lesson && Object.entries(lesson).length === 0 && !err ? (
           <Loading />
         ) : null}
-
-        {err && <AlertContainer />}
 
         {!guide || !lesson || err ? (
           <Headline size="sm">No hay contenido para mostrar</Headline>
