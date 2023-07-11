@@ -17,7 +17,7 @@ export function GuideSidebar({
             <li key={lesson._id}>
               <Link
                 className={`block w-full py-0.5 px-2 text-white text-sm font-medium ${
-                  lessonIdentifier.toLowerCase() === lesson.identifier
+                  lessonIdentifier?.toLowerCase() === lesson.identifier
                     ? 'bg-[#3d53a1]'
                     : ''
                 }`}

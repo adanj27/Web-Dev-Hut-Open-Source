@@ -13,9 +13,10 @@ export function GuideLesson({
   className = '',
   ...props
 }) {
-  const { AlertContainer, alert } = useAlert()
+  const { alert } = useAlert()
 
   const copyCode = (code) => {
+    console.log('copiando')
     copyToClipboard(
       code,
       () => alert.success('Copiado con éxito'),
@@ -25,7 +26,6 @@ export function GuideLesson({
 
   return (
     <div className={`w-full xl:w-[70%] ${className}`} {...props}>
-      <AlertContainer />
       {!loadingLesson && lesson?.content ? (
         <article>
           <ReactMarkdown

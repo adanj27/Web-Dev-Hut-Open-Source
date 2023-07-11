@@ -42,7 +42,7 @@
   }
 
   pre {
-    @apply bg-[#111b27] inline-block border-l-4 border-[#00BBE4] rounded-md flex justify-start items-start overflow-hidden;
+    @apply bg-[#111b27] border-l-4 border-[#00BBE4] rounded-md flex justify-start items-start overflow-hidden;
   }
 
   pre .code-box {
@@ -60,6 +60,10 @@
   }
 
   .filter-button {
-    @apply uppercase outline-none bg-transparent text-white inline-block cursor-pointer text-sm  border-b-4 border-b-white border-[none] border-solid focus:text-[#40C18A] focus:transition-[1s] focus:duration-[ease-in-out] focus:border-[#40C18A] hover:text-[#40C18A] hover:border-[#40C18A] font-bold tracking-wide mb-2 py-2 px-5;
+    @apply uppercase outline-none bg-transparent text-white inline-block cursor-pointer text-sm  border-b-4 border-b-white border-[none] border-solid hover:text-[#40C18A] hover:border-[#40C18A] font-bold tracking-wide mb-2 py-2 px-5;
+  }
+
+  .filter-button.active {
+    @apply !text-[#40C18A] transition-[1s] duration-[ease-in-out] !border-[#40C18A];
   }
 }

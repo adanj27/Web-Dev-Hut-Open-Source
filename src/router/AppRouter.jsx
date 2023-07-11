@@ -3,9 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import {
   Home,
   LearnRoutes,
-  Frontend,
-  Backend,
-  Other,
+  Technologies,
   Error404,
   Technology,
   Guide,
@@ -16,12 +14,10 @@ export const AppRouter = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/rutas" element={<LearnRoutes />} />
-      <Route path="/frontend" element={<Frontend />} />
-      <Route path="/frontend/:name" element={<Technology />} />
-      <Route path="/backend" element={<Backend />} />
-      <Route path="/backend/:name" element={<Technology />} />
-      <Route path="/otros-recursos" element={<Other />} />
-      <Route path="/otros-recursos/:name" element={<Technology />} />
+      <Route path="/frontend" element={<Technologies />} />
+      <Route path="/backend" element={<Technologies />} />
+      <Route path="/otros-recursos" element={<Technologies />} />
+      <Route path="/tecnologia/:name" element={<Technology />} />
       <Route
         path="/guias/:guideIdentifier/:lessonIdentifier?"
         element={<Guide />}

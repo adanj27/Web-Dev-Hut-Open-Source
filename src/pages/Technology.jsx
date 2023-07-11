@@ -7,7 +7,7 @@ import { Container, GuideCard, Headline, Loading, Section } from '../components'
 
 export const Technology = () => {
   const { name } = useParams()
-  const { AlertContainer, alert } = useAlert()
+  const { alert } = useAlert()
 
   const [guides, setGuides] = useState([])
   const [err, setErr] = useState('')
@@ -20,7 +20,7 @@ export const Technology = () => {
   const fetchGuides = async () => {
     const { data, error } = (await Guides.getByTechnology(name)) ?? {}
     if (error) showError(error)
-    if (data?.length === 0) return setGuides(null)
+    if (!data || data?.length === 0) return setGuides(null)
 
     setGuides(data)
     return data
@@ -44,8 +44,6 @@ export const Technology = () => {
           <Headline size="sm">No hay guías para mostrar</Headline>
         ) : null}
 
-        {err && <AlertContainer />}
-
         {guides?.length > 0 && atLeastOneLesson(guides) && (
           <>
             <Headline size="sm" className="mb-5">
@@ -59,7 +57,7 @@ export const Technology = () => {
                   <GuideCard
                     key={guide._id}
                     thumbnail={guide.banner.img}
-                    title={guide.title}
+                    title={guide.name}
                     description={guide.description}
                     to={`/guias/${guide.identifier}`}
                   />
