@@ -9,6 +9,7 @@ import {
   GuideSidebar,
   Headline,
   Loading,
+  Section,
 } from '../components'
 
 export function Guide() {
@@ -66,31 +67,33 @@ export function Guide() {
   }, [lessonIdentifier])
 
   return (
-    <Container className="my-16">
-      {lesson && Object.entries(lesson).length === 0 && !err ? (
-        <Loading />
-      ) : null}
+    <Section>
+      <Container className="my-16">
+        {lesson && Object.entries(lesson).length === 0 && !err ? (
+          <Loading />
+        ) : null}
 
-      {err && <AlertContainer />}
+        {err && <AlertContainer />}
 
-      {!guide || !lesson || err ? (
-        <Headline size="sm">No hay contenido para mostrar</Headline>
-      ) : null}
+        {!guide || !lesson || err ? (
+          <Headline size="sm">No hay contenido para mostrar</Headline>
+        ) : null}
 
-      {guide?.lessons?.length > 0 &&
-      lesson &&
-      Object.entries(lesson).length > 0 ? (
-        <>
-          <Headline size="sm" className="max-w-xl mb-4">
-            Guías | {guide.name}
-          </Headline>
+        {guide?.lessons?.length > 0 &&
+        lesson &&
+        Object.entries(lesson).length > 0 ? (
+          <>
+            <Headline size="sm" className="max-w-xl mb-4">
+              Guías | {guide.name}
+            </Headline>
 
-          <div className="flex justify-between items-stretch flex-wrap gap-10">
-            <GuideSidebar guide={guide} lessonIdentifier={lessonIdentifier} />
-            <GuideLesson lesson={lesson} loadingLesson={loadingLesson} />
-          </div>
-        </>
-      ) : null}
-    </Container>
+            <div className="flex justify-between items-stretch flex-wrap gap-10">
+              <GuideSidebar guide={guide} lessonIdentifier={lessonIdentifier} />
+              <GuideLesson lesson={lesson} loadingLesson={loadingLesson} />
+            </div>
+          </>
+        ) : null}
+      </Container>
+    </Section>
   )
 }

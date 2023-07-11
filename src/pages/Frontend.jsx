@@ -6,6 +6,7 @@ import {
   IntroductionText,
   Items,
   TechnologyIcons,
+  Section,
 } from '../components'
 
 import { frontend } from '../data'
@@ -27,7 +28,7 @@ export const Frontend = () => {
   }
 
   return (
-    <section className="text-[#f1f1f1] my-16 max-w-7xl mx-auto">
+    <Section>
       <Container>
         <div className="grid grid-cols-2 gap-2">
           <IntroductionText />
@@ -55,6 +56,6 @@ export const Frontend = () => {
           <Items listItems={listItems} />
         </div>
       </Container>
-    </section>
+    </Section>
   )
 }

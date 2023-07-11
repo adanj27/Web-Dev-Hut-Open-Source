@@ -7,6 +7,21 @@ module.exports = {
       backgroundImage: {
         'footer-wave': 'url("/img/footer-wave.svg")',
       },
+      animation: {
+        'fade-in-to-bottom': 'fade-in-to-bottom 0.5s forwards',
+      },
+      keyframes: {
+        'fade-in-to-bottom': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-15px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'initial',
+          },
+        },
+      },
     },
     fontFamily: {
       body: ['"Roboto"', 'system-ui', '-apple-system', 'sans-serif'],
