@@ -5,7 +5,19 @@ import { MdContentCopy } from 'react-icons/md'
 
 import { copyToClipboard } from '../../utils'
 import { useAlert } from '../../hooks'
-import { Headline, IconButton, Loading } from '../'
+import { Anchor, Headline, IconButton, ListItem, Loading, Paragraph } from '../'
+
+const markdownComponents = {
+  h1: ({ node, ...props }) => <Headline as="h1" size="md" {...props} />,
+  h2: ({ node, ...props }) => <Headline as="h2" size="sm" {...props} />,
+  h3: ({ node, ...props }) => <Headline as="h3" size="xs" {...props} />,
+  h4: ({ node, ...props }) => <Headline as="h4" size="xs" {...props} />,
+  h5: ({ node, ...props }) => <Headline as="h5" size="xs" {...props} />,
+  h6: ({ node, ...props }) => <Headline as="h6" size="xs" {...props} />,
+  p: ({ node, ...props }) => <Paragraph {...props} />,
+  a: ({ target, node, ...props }) => <Anchor target="_blank" {...props} />,
+  li: ({ ordered, node, ...props }) => <ListItem {...props} />,
+}
 
 export function GuideLesson({
   lesson,
@@ -16,7 +28,6 @@ export function GuideLesson({
   const { alert } = useAlert()
 
   const copyCode = (code) => {
-    console.log('copiando')
     copyToClipboard(
       code,
       () => alert.success('Copiado con éxito'),
@@ -27,12 +38,13 @@ export function GuideLesson({
   return (
     <div className={`w-full xl:w-[70%] ${className}`} {...props}>
       {!loadingLesson && lesson?.content ? (
-        <article>
+        <article className="lesson-content">
           <ReactMarkdown
             className="text-[#f1f1f1]"
             children={lesson.content}
             components={{
-              code({ node, inline, className, children, ...props }) {
+              ...markdownComponents,
+              code: ({ node, inline, className, children, ...props }) => {
                 const match = /language-(\w+)/.exec(className || '')
                 return !inline && match ? (
                   <>
