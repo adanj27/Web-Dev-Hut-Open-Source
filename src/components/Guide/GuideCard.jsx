@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { Headline, Paragraph } from './'
+import { Headline, Paragraph } from '../'
 
 export function GuideCard({
   thumbnail,

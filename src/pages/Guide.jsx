@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import ReactMarkdown from 'react-markdown'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import { useAlert } from '../hooks'
 import { Guides, Lesson } from '../services'
-import { Container, Headline, Loading } from '../components'
+import {
+  Container,
+  GuideLesson,
+  GuideSidebar,
+  Headline,
+  Loading,
+} from '../components'
 
 export function Guide() {
   const navigate = useNavigate()
@@ -12,6 +17,7 @@ export function Guide() {
   const { AlertContainer, alert } = useAlert()
   const [guide, setGuide] = useState({})
   const [lesson, setLesson] = useState({})
+  const [loadingLesson, setLoadingLesson] = useState(false)
   const [err, setErr] = useState('')
 
   const showError = (error) => {
@@ -23,8 +29,12 @@ export function Guide() {
     const { data, error } = await Guides.getByIdentifier(guideIdentifier)
     if (error) showError(error)
 
-    // Guide not found, set to null
-    if (!data) return setGuide(null)
+    // Guide not found, set guide and lesson to null
+    if (!data) {
+      setGuide(null)
+      setLesson(null)
+      return
+    }
 
     // Guide found, no lesson specified
     if (!lessonIdentifier) {
@@ -45,17 +55,21 @@ export function Guide() {
     if (error) showError(error)
     if (!data) return setLesson(null)
 
+    setLoadingLesson(false)
     setLesson(data)
     return data
   }
 
   useEffect(() => {
+    setLoadingLesson(true)
     fetchGuide()
   }, [lessonIdentifier])
 
   return (
     <Container className="my-16">
-      {guide && Object.entries(guide).length === 0 && !err ? <Loading /> : null}
+      {lesson && Object.entries(lesson).length === 0 && !err ? (
+        <Loading />
+      ) : null}
 
       {err && <AlertContainer />}
 
@@ -70,41 +84,10 @@ export function Guide() {
           <Headline size="sm" className="max-w-xl mb-4">
             Guías | {guide.name}
           </Headline>
-          <div className="flex justify-between items-stretch flex-wrap">
-            <aside className="flex-[0.3] relative before:content-[''] before:w-[1px] before:h-full before:absolute before:right-0 before:top-0 before:bg-[#f1f1f1]">
-              <ul>
-                {guide.lessons?.map((lesson) => {
-                  return (
-                    <li key={lesson._id} className="text-white mb-2">
-                      <Link
-                        to={`/guias/${guide.identifier}/${lesson.identifier}`}
-                        className={
-                          lessonIdentifier.toLowerCase() === lesson.identifier
-                            ? 'underline'
-                            : ''
-                        }
-                      >
-                        {lesson.name}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </aside>
 
-            <div className="flex-[0.7] pl-10">
-              {lesson?.content ? (
-                <article>
-                  <ReactMarkdown className="text-[#f1f1f1]">
-                    {lesson.content}
-                  </ReactMarkdown>
-                </article>
-              ) : (
-                <Headline size="sm">
-                  No hay contenido para esta sección
-                </Headline>
-              )}
-            </div>
+          <div className="flex justify-between items-stretch flex-wrap gap-10">
+            <GuideSidebar guide={guide} lessonIdentifier={lessonIdentifier} />
+            <GuideLesson lesson={lesson} loadingLesson={loadingLesson} />
           </div>
         </>
       ) : null}
