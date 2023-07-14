@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-
 import {
   Button,
   Container,
@@ -29,12 +28,7 @@ export function LearnRoutes() {
           </div>
         </div>
         <div className="flex justify-center">
-          
-          {imgIndex == 0 ? (
-            <img/>
-          ) : (
-            <img/>
-          )} 
+          {imgIndex == 0 ? <img /> : <img />}
         </div>
       </Container>
     </div>
