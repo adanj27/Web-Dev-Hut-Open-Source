@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-import frontendImage from '../assets/frontend.png'
-import backendImage from '../assets/backend.png'
 
 import {
   Button,
@@ -11,7 +9,6 @@ import {
 } from '../components'
 
 export function LearnRoutes() {
-  const imgStyle = 'rounded-lg z-50 my-20 shadow-md min-w-full min-h-full'
   const [imgIndex, setImgIndex] = useState(0)
   return (
     <div className="mx-auto">
@@ -32,11 +29,12 @@ export function LearnRoutes() {
           </div>
         </div>
         <div className="flex justify-center">
+          
           {imgIndex == 0 ? (
-            <img className={imgStyle} src={frontendImage} alt="foto de ruta" />
+            <img/>
           ) : (
-            <img className={imgStyle} src={backendImage} alt="foto de ruta" />
-          )}
+            <img/>
+          )} 
         </div>
       </Container>
     </div>

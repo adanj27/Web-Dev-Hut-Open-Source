@@ -26,3 +26,14 @@
     @apply w-24 -mr-10;
   }
 }
+
+@layer components {
+  .first {
+    z-index: auto;
+  }
+
+  .contenedor:hover .second {
+    transform: translateX(100px);
+    transition: 0.5s;
+  }
+}
