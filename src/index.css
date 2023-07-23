@@ -12,65 +12,41 @@
     @apply font-body;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  article ul,
-  pre {
+  .lesson-content h1,
+  .lesson-content h2,
+  .lesson-content h3,
+  .lesson-content h4,
+  .lesson-content h5,
+  .lesson-content h6,
+  .lesson-content p,
+  .lesson-content ul,
+  .lesson-content pre {
     @apply mb-4;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-xl sm:text-2xl font-medium max-w-xs first-letter:capitalize text-[#f1f1f1] dark:text-[#f1f1f1];
+  .lesson-content pre {
+    @apply bg-[#111b27] border-l-4 border-[#00BBE4] rounded-md flex justify-start items-start overflow-hidden;
   }
 
-  p {
-    @apply text-[#f1f1f1] text-base;
+  .lesson-content pre .code-box {
+    @apply bg-[#0c141c] p-4 w-full !important;
   }
 
-  article ul {
-    @apply list-disc ml-4;
-  }
-
-  pre {
-    @apply bg-[#272727]/50 border-l-4 border-[#00BBE4] rounded-md p-4;
-  }
-
-  code:not(pre code) {
+  .lesson-content code:not(pre code) {
     @apply bg-[#7D7D7D]/50 px-1;
   }
 }
 
 @layer utilities {
-  .area button {
-    @apply uppercase outline-none bg-transparent text-white inline-block cursor-pointer text-[12px]  border-b-4 border-b-white border-[none] border-solid focus:text-[#40C18A] focus:transition-[1s] focus:duration-[ease-in-out] focus:border-[#40C18A] hover:text-[#40C18A] hover:border-[#40C18A] font-bold tracking-wide;
+  .copy-code-button {
+    @apply [&>svg]:text-white/50 [&>svg]:hover:text-white inline-block py-2;
   }
 
-  .area button:not(:last-of-type) {
-    @apply mb-2;
+  .filter-button {
+    @apply uppercase outline-none bg-transparent text-white inline-block cursor-pointer text-sm  border-b-4 border-b-white border-[none] border-solid hover:text-[#40C18A] hover:border-[#40C18A] font-bold tracking-wide mb-2 py-2 px-5;
   }
 
-  .area2 button {
-    @apply w-24 -mr-10;
-  }
-}
-
-@layer components {
-  .first {
-    z-index: auto;
-  }
-
-  .contenedor:hover .second {
-    transform: translateX(100px);
-    transition: 0.5s;
+  .filter-button.active {
+    @apply !text-[#40C18A] transition-[1s] duration-[ease-in-out] !border-[#40C18A];
   }
 }

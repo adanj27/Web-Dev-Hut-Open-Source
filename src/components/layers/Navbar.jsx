@@ -22,7 +22,7 @@ export function Navbar() {
 
       <div className="fixed z-50 xl:hidden top-11 right-5">
         <IconButton
-          Icon={menuOpened ? RxCross1 : FiMenu}
+          icon={menuOpened ? RxCross1 : FiMenu}
           onClick={toggleMenu}
           className="block my-auto child:w-12 child:h-12"
         />

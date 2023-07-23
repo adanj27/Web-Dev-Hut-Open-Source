@@ -168,7 +168,7 @@ export const backend = [
   },
   {
     id: 7,
-    category: 'APIs',
+    category: 'API',
     title: 'GraphQL',
     description:
       'Lenguaje de consulta y un entorno de tiempo de ejecución para APIs que permite obtener datos de manera eficiente y precisa.',
@@ -185,7 +185,7 @@ export const other = [
     title: 'Visual Studio Code',
     description:
       'Visual Studio Code es un editor de texto de código abierto, por lo que cualquiera puede acceder al código del software para verlo, modificarlo y distribuirlo a su gusto',
-    path: '/other/visualstudio',
+    path: '/otros-recursos/visualstudio',
     logo: Visualstudio,
     bg: visualstudio,
   },
@@ -195,7 +195,7 @@ export const other = [
     title: 'Sublime Text',
     description:
       'Sublime Text es la mejor opción para un entorno de desarrollo completo, ya que agrupa código, marcado y prosa en una sola herramienta.',
-    path: '/other/sublimetext',
+    path: '/otros-recursos/sublimetext',
     logo: Sublimetext,
     bg: sublimetext,
   },
@@ -205,7 +205,7 @@ export const other = [
     title: 'NPM',
     description:
       'NPM se puede considerar como las siglas de Node Package Manager, es decir, gestor de paquetes de NodeJS, un entorno de ejecución multiplataforma para ejecutar Javascript no sólo en un navegador web',
-    path: '/other/npm',
+    path: '/otros-recursos/npm',
     logo: Npm,
     bg: npm,
   },
@@ -215,7 +215,7 @@ export const other = [
     title: 'Yarn',
     description:
       'YARN es un gestor dependencias de JavaScript, que está enfocado en la velocidad y la seguridad',
-    path: '/other/yarn',
+    path: '/otros-recursos/yarn',
     logo: Yarn,
     bg: yarn,
   },
@@ -225,7 +225,7 @@ export const other = [
     title: 'Jest',
     description:
       'Amamos las iniciativas sin fines de lucro que promueven el crecimiento de la industria TI, y freeCodeCampes una de ellas.',
-    path: '/other/jest',
+    path: '/otros-recursos/jest',
     logo: Jest,
     bg: jest,
   },
@@ -235,7 +235,7 @@ export const other = [
     title: 'Git',
     description:
       'Git es un sistema de control de versiones distribuido, lo que significa que un clon local del proyecto es un repositorio de control de versiones completo',
-    path: '/other/git',
+    path: '/otros-recursos/git',
     logo: Git,
     bg: git,
   },
@@ -254,7 +254,7 @@ export const other = [
     title: 'Tutoriales y guias de inicio rapido',
     description:
       'Amamos las iniciativas sin fines de lucro que promueven el crecimiento de la industria TI, y freeCodeCampes una de ellas.',
-    path: '/other/freecode',
+    path: '/otros-recursos/freecode',
     logo: Tuto,
     bg: tuto,
   },

@@ -10,7 +10,7 @@ import {
 
 export const Home = () => {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto animate-fade-in-to-bottom">
       <Hero />
       <Container className="relative z-10">
         <FeaturedSection />

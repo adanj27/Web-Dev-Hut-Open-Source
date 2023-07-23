@@ -2,19 +2,20 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { useAlert } from '../hooks'
-import { Guides, Lesson } from '../services'
+import { Guides, Lessons } from '../services'
 import {
   Container,
   GuideLesson,
   GuideSidebar,
   Headline,
   Loading,
+  Section,
 } from '../components'
 
 export function Guide() {
   const navigate = useNavigate()
   const { guideIdentifier, lessonIdentifier } = useParams()
-  const { AlertContainer, alert } = useAlert()
+  const { alert } = useAlert()
   const [guide, setGuide] = useState({})
   const [lesson, setLesson] = useState({})
   const [loadingLesson, setLoadingLesson] = useState(false)
@@ -51,7 +52,7 @@ export function Guide() {
   }
 
   const fetchLesson = async (identifier) => {
-    const { data, error } = await Lesson.getByIdentifier(identifier)
+    const { data, error } = await Lessons.getByIdentifier(identifier)
     if (error) showError(error)
     if (!data) return setLesson(null)
 
@@ -66,31 +67,31 @@ export function Guide() {
   }, [lessonIdentifier])
 
   return (
-    <Container className="my-16">
-      {lesson && Object.entries(lesson).length === 0 && !err ? (
-        <Loading />
-      ) : null}
+    <Section>
+      <Container className="my-16">
+        {lesson && Object.entries(lesson).length === 0 && !err ? (
+          <Loading />
+        ) : null}
 
-      {err && <AlertContainer />}
+        {!guide || !lesson || err ? (
+          <Headline size="sm">No hay contenido para mostrar</Headline>
+        ) : null}
 
-      {!guide || !lesson || err ? (
-        <Headline size="sm">No hay contenido para mostrar</Headline>
-      ) : null}
+        {guide?.lessons?.length > 0 &&
+        lesson &&
+        Object.entries(lesson).length > 0 ? (
+          <>
+            <Headline size="sm" className="max-w-xl mb-4">
+              Guías | {guide.name}
+            </Headline>
 
-      {guide?.lessons?.length > 0 &&
-      lesson &&
-      Object.entries(lesson).length > 0 ? (
-        <>
-          <Headline size="sm" className="max-w-xl mb-4">
-            Guías | {guide.name}
-          </Headline>
-
-          <div className="flex justify-between items-stretch flex-wrap gap-10">
-            <GuideSidebar guide={guide} lessonIdentifier={lessonIdentifier} />
-            <GuideLesson lesson={lesson} loadingLesson={loadingLesson} />
-          </div>
-        </>
-      ) : null}
-    </Container>
+            <div className="flex justify-between items-stretch flex-wrap gap-10">
+              <GuideSidebar guide={guide} lessonIdentifier={lessonIdentifier} />
+              <GuideLesson lesson={lesson} loadingLesson={loadingLesson} />
+            </div>
+          </>
+        ) : null}
+      </Container>
+    </Section>
   )
 }
