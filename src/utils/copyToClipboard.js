@@ -1,4 +1,4 @@
-export function copyToClipboard(text, success, error) {
+export const copyToClipboard = (text, success, error) => {
   navigator.clipboard
     .writeText(text)
     .then(() => success())
