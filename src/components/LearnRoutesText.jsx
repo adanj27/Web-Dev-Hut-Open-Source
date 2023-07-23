@@ -21,7 +21,7 @@ export function LearnRoutesText({
         web.
       </Paragraph>
       {!hideButton && (
-        <Link to="#">
+        <Link to="/rutas">
           <Button as="span" icon={MdAltRoute}>
             Ver rutas
           </Button>

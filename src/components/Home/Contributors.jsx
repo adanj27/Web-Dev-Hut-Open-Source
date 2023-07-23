@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { getContributors } from '../../services'
+import { Contributors as ContributorsService } from '../../services'
 
 import { Headline, Paragraph } from '../'
 
 export const Contributors = () => {
   const [collaborators, setCollaborators] = useState([])
 
+  const fetchContributors = async () => {
+    const { data, error } = await ContributorsService.getAll()
+    if (!data) return setCollaborators(null)
+    setCollaborators(data)
+  }
+
   useEffect(() => {
-    ;(async () => {
-      const { contributors } = await getContributors()
-      setCollaborators(contributors)
-    })()
+    fetchContributors()
   }, [])
 
   return (
