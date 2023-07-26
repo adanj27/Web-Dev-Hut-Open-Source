@@ -33,7 +33,11 @@ export const Hero = () => {
             </Paragraph>
             <button className="sm:w-[250px] w-[180px] bg-gradient-to-b from-[#ffffff] to-[#909090] py-2 px-5 rounded-[15px] flex items-center sm:text-xl text-lg font-semibold">
               <BsDiscord className="text-5xl text-[#3D3D3D]" />
-              <a href="https://discord.gg/DCrVhFydDW" className="leading-6">
+              <a
+                href="https://discord.gg/DCrVhFydDW"
+                target="_blank"
+                className="leading-6"
+              >
                 Comunidad de discord
               </a>
             </button>

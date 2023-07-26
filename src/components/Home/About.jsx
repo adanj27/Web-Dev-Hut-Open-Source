@@ -52,12 +52,15 @@ export function About() {
               comunidad!{' '}
             </Paragraph>
             <div className="grid grid-flow-row max-w-sm mx-auto py-5 gap-24 md:grid-cols-2">
-              <Link to="https://discord.gg/DCrVhFydDW">
+              <Link to="https://discord.gg/DCrVhFydDW" target="_blank">
                 <Button as="span" icon={BsDiscord}>
                   Discord
                 </Button>
               </Link>
-              <Link to="https://github.com/adanj27/Web-Dev-Hut-Open-Source">
+              <Link
+                to="https://github.com/adanj27/Web-Dev-Hut-Open-Source"
+                target="_blank"
+              >
                 <Button as="span" icon={BsGithub}>
                   Github
                 </Button>

@@ -24,6 +24,7 @@ import {
   TechnologyAreaCard,
   TechnologyIcons,
 } from '../'
+import { Link } from 'react-router-dom'
 
 export function FeaturedSection() {
   const technologies = {
@@ -32,37 +33,37 @@ export function FeaturedSection() {
         name: 'HTML',
         description:
           'Lenguaje de marcado - se utiliza para estructurar y dar formato',
-        path: '#',
+        path: '/tecnologia/html',
       },
       {
         name: 'CSS',
         description:
           'Lenguaje de estilos - se utiliza para dar estilo y diseño',
-        path: '#',
+        path: '/tecnologia/css',
       },
       {
         name: 'JavaScript',
         description:
           'Lenguaje de programación - se utiliza para añadir interactividad',
-        path: '#',
+        path: '/tecnologia/javascript',
       },
     ],
     backend: [
       {
         name: 'PHP',
         description: 'Lenguaje de programación de código abierto especialmente',
-        path: '#',
+        path: '/tecnologia/php',
       },
       {
         name: 'Python',
         description: 'Lenguaje de programación de alto nivel de código abierto',
-        path: '#',
+        path: '/tecnologia/python',
       },
       {
         name: 'Java',
         description:
           'Lenguaje de programación de alto nivel orientado a objetos',
-        path: '#',
+        path: '/tecnologia/java',
       },
     ],
   }
@@ -84,7 +85,7 @@ export function FeaturedSection() {
               iconImage={reactjsIcon}
               title={'React.js - Desarrollo web'}
               description={'Biblioteca de JavaScript para construir interfaces'}
-              to="#"
+              to="/tecnologia/react"
               className="from-[#FFDF6F] to-[#983232] mt-5 2lg:mt-0"
             />
           </TechnologyAreaCard>
@@ -99,7 +100,7 @@ export function FeaturedSection() {
               iconImage={nodejsIcon}
               title={'Node.js - Desarrollo web'}
               description={'Entorno de ejecución de JavaScript'}
-              to="#"
+              to="/tecnologia/nodejs"
               className="from-[#4BBDFA] to-[#276CDA] mb-5 2lg:mb-0"
             />
           </TechnologyAreaCard>
@@ -113,7 +114,7 @@ export function FeaturedSection() {
             description={
               'Lenguaje de programación de código abierto que es una extensión de JavaScript'
             }
-            to="#"
+            to="/tecnologia/typescript"
             className="from-[#9E80E2] to-[#4F98E5]"
           />
 
@@ -124,7 +125,7 @@ export function FeaturedSection() {
             description={
               'Lenguaje de programación utilizado para administrar y manipular bases de datos relacionales'
             }
-            to="#"
+            to="/tecnologia/sql"
             className="from-[#59BCF7] to-[#2171DA]"
           />
 
@@ -135,7 +136,7 @@ export function FeaturedSection() {
             description={
               'Framework de React para construir aplicaciones web del lado del servidor (SSR, por sus siglas en inglés)'
             }
-            to="#"
+            to="/tecnologia/nextjs"
             className="from-[#34B3FA] to-[#4b7880]"
           />
 
@@ -146,7 +147,7 @@ export function FeaturedSection() {
             description={
               'Plataforma de software, se utiliza para crear, desplegar, ejecutar aplicaciones en contenedores'
             }
-            to="#"
+            to="/tecnologia/docker"
             className="from-[#A7773E] to-[#8E97A6]"
           />
 
@@ -157,16 +158,18 @@ export function FeaturedSection() {
             description={
               'Framework de desarrollo web que se utiliza para construir aplicaciones web y móviles'
             }
-            to="#"
+            to="/tecnologia/angular"
             className="from-[#644285] to-[#8078DF]"
           />
         </div>
       </div>
 
       <div className="text-center">
-        <Button icon={MdBallot} className="mt-5">
-          Ver todo
-        </Button>
+        <Link to="/tecnologias">
+          <Button as="span" icon={MdBallot} className="mt-5">
+            Ver todo
+          </Button>
+        </Link>
       </div>
     </section>
   )

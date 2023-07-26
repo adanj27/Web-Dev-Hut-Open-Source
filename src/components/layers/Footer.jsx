@@ -41,7 +41,7 @@ export function Footer({ className = '', ...props }) {
 
         <ul className="direct-child:mb-10 [&_svg]:inline-block">
           <li>
-            <Link to="https://discord.gg/Hmew77TY" target="_blank">
+            <Link to="https://discord.gg/DCrVhFydDW" target="_blank">
               <BsDiscord /> Discord
             </Link>
           </li>
