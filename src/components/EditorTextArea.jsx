@@ -11,15 +11,27 @@ import { html as cmhtml} from "@codemirror/lang-html" //can change to require() 
 import {css} from "@codemirror/lang-css"
 import { defaultHighlightStyle} from "@codemirror/highlight"
 import ReactCodeMirror from "@uiw/react-codemirror"
+import * as prettier from "prettier";
 import {dracula } from '@uiw/codemirror-theme-dracula';
+import prettierPluginBabel from "https://unpkg.com/prettier@3.0.0/plugins/babel.mjs";
+import prettierPluginEstree from "https://unpkg.com/prettier@3.0.0/plugins/estree.mjs";
+import prettierPluginHtml from "https://unpkg.com/prettier@3.0.0/plugins/html.mjs";
+//import * as babelParser from "@babel/parser"
+import {parse as htmlParser} from 'angular-html-parser';
+import hljs from "highlight.js"
+import { parse as cssp } from "postcss"
+//import { postcss } from "stylefmt"
+
+//const prefixer = Postcss.sync([ autoprefixer])
+
 
 export function EditorTextArea({
     as = 'editorTextArea',
     className = '',
-    language='html',
     jsContent ='',
     htmlContent='',
-    cssContent=''
+    cssContent='',
+    readonly=false
   }) {
     const As = as
     const editorRef = useRef()
@@ -67,20 +79,45 @@ export function EditorTextArea({
       setCombined(finalScript)
     }
 
+    //funcion de prettier para formatting de codigo
+    const formatCode = async (curTab) =>{
+      let formattedCode
+      if(curTab==0){
+        formattedCode = await prettier.format(html,{parser:"html",plugins:["htmlParser"]})
+        setTempCode(formattedCode)
+      }
+      if(curTab==1){
+        formattedCode = await prettier.format(css,{parser:"cssp",plugins:[cssp]})
+        setTempCss(formattedCode)
+      }
+      if(curTab==2){
+        formattedCode = await prettier.format(jsContent,{
+          parser:"babel",
+          plugins:[prettierPluginBabel,prettierPluginEstree]
+        })
+        setTempJs(formattedCode)
+      }
+      //return formattedCode
+    }
+
     
     const handleReset = () =>{
+      let ctn;
       switch(curTab){
         case 0:
-          setHtml(htmlContent);
-          setTempCode(htmlContent);
+          ctn = htmlContent
+          setHtml(ctn);
+          setTempCode(ctn);
           break
         case 1:
-          setCss(cssContent);
-          setTempCss(cssContent);
+          ctn = cssContent
+          setCss(ctn);
+          setTempCss(ctn);
           break
         case 2:
-          setJs(jsContent);
-          setTempJs(jsContent);
+          ctn = jsContent
+          setJs(ctn);
+          setTempJs(ctn);
           break
       }
     }
@@ -113,18 +150,19 @@ export function EditorTextArea({
     const handleTabChange = (v) =>(v>-1 && v<3)?setTab(v):null
     
 
-    const addExtensions = () =>{
+    
+    const addExtensions = (tabNo) =>{
       let extensionsList = []
-      switch(language){
-        case 'javascript':{
+      switch(tabNo){
+        case 0:{
           extensionsList = [javascript({ jsx: true })]
           break
         }
-        case 'html':{
+        case 1:{
           extensionsList = [cmhtml()]
           break
         }
-        case 'css':{
+        case 2:{
           extensionsList = [css()]
           break
         }
@@ -149,19 +187,21 @@ export function EditorTextArea({
         </FilterButton>
         </div>
           </div>
-          <div class="grid grid-cols-3 gap-4">
-            <button key={0} className={`rounded-md flex justify-center ${curTab==0?'bg-indigo-600':'border-2'}`} onClick={()=>handleTabChange(0)}>index.html</button>
-            <button key={1} className={`rounded-md flex justify-center ${curTab==1?'bg-indigo-600':'border-2'}`} onClick={()=>handleTabChange(1)}>main.css</button>
-            <button key={2} className={`rounded-md flex justify-center ${curTab==2?'bg-indigo-600':'border-2'}`} onClick={()=>handleTabChange(2)}>index.js</button>
+          <div class="grid grid-cols-3 gap-3 m-2">
+            <button disabled={html.trim().length<1}  key={0} className={`rounded-md flex justify-center ${curTab==0?'bg-indigo-600':html.trim().length<1?'slate-700 text-slate-700':'border-2'}`} onClick={()=>handleTabChange(0)}>index.html</button>
+            <button disabled={ecss.trim().length<1} key={1} className={`rounded-md flex justify-center ${curTab==1?'bg-indigo-600':ecss.trim().length<1?'slate-700 text-slate-700':'border-2'}`} onClick={()=>handleTabChange(1)}>main.css</button>
+            <button disabled={ejs.trim().length<1}  key={2} className={`rounded-md flex justify-center ${curTab==2?'bg-indigo-600':ejs.trim().length<1?'slate-700 text-slate-700':'border-2'}`} onClick={()=>handleTabChange(2)}>index.js</button>
           </div>
             <div>
             <ReactCodeMirror
+              readOnly={readonly}
+              onKeyUp={(e)=>e.key=='Enter'?formatCode(curTab):null}
               value={curTab==0?html:curTab==1?ecss:ejs}
               height="400px"
               onError={handleError}
               className="text-lg rounded-md"
               theme={dracula}
-              extensions={addExtensions()}
+              extensions={addExtensions(curTab)}
               onChange={handleChange}
             />
           

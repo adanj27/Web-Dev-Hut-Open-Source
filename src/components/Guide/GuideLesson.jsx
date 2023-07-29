@@ -79,7 +79,7 @@ export function GuideLesson({
           />
           <EditorTextArea 
           htmlContent={"<h1>hola</h1>"}
-          jsContent={"console.log('kiubo')"}
+          jsContent={"function test(){console.log('kiubo')}"}
           cssContent={"h1{color:red;}"}
           />
         </article>
