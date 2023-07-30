@@ -6,6 +6,7 @@ import { MdContentCopy } from 'react-icons/md'
 import { copyToClipboard } from '../../utils'
 import { useAlert } from '../../hooks'
 import { Anchor, Headline, IconButton, ListItem, Loading, Paragraph } from '../'
+import { EditorTextArea } from '../EditorTextArea'
 
 const markdownComponents = {
   h1: ({ node, ...props }) => <Headline as="h1" size="md" {...props} />,
@@ -66,6 +67,7 @@ export function GuideLesson({
                       className="copy-code-button"
                       onClick={() => copyCode(children)}
                     />
+                    
                   </>
                 ) : (
                   <code {...props} className={className}>
@@ -74,6 +76,11 @@ export function GuideLesson({
                 )
               },
             }}
+          />
+          <EditorTextArea 
+          htmlContent={"<h1>hola</h1>"}
+          jsContent={"function test(){console.log('kiubo')}"}
+          cssContent={"h1{color:red;}"}
           />
         </article>
       ) : null}
