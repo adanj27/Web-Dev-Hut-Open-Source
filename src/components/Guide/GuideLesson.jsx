@@ -67,7 +67,6 @@ export function GuideLesson({
                       className="copy-code-button"
                       onClick={() => copyCode(children)}
                     />
-                    
                   </>
                 ) : (
                   <code {...props} className={className}>
@@ -77,10 +76,10 @@ export function GuideLesson({
               },
             }}
           />
-          <EditorTextArea 
-          htmlContent={"<h1>hola</h1>"}
-          jsContent={"function test(){console.log('kiubo')}"}
-          cssContent={"h1{color:red;}"}
+          <EditorTextArea
+            htmlContent={'<h1>hola</h1>'}
+            jsContent={"function test(){console.log('kiubo')}"}
+            cssContent={'h1{color:red;}'}
           />
         </article>
       ) : null}
