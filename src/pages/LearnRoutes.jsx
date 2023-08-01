@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Frontpage } from '../pages/Frontpage.jsx'
 
-
 import {
   FilterButton,
   Container,
@@ -32,11 +31,7 @@ export function LearnRoutes() {
           </div>
         </div>
         <div className="flex justify-center">
-          {imgIndex == 0 ? (
-            <Frontpage />
-          ) : (
-            <img  />
-          )}
+          {imgIndex == 0 ? <Frontpage /> : <img />}
         </div>
       </Container>
     </Section>

@@ -35,7 +35,6 @@ export const Technology = () => {
     fetchGuides()
   }, [])
 
-  
   return (
     <Section>
       <Container>
