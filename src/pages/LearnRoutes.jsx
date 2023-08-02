@@ -1,7 +1,5 @@
 import { useState } from 'react'
-
-import frontendImage from '../assets/frontend.png'
-import backendImage from '../assets/backend.png'
+import { Frontpage } from '../pages/Frontpage.jsx'
 
 import {
   FilterButton,
@@ -33,11 +31,7 @@ export function LearnRoutes() {
           </div>
         </div>
         <div className="flex justify-center">
-          {imgIndex == 0 ? (
-            <img className={imgStyle} src={frontendImage} alt="foto de ruta" />
-          ) : (
-            <img className={imgStyle} src={backendImage} alt="foto de ruta" />
-          )}
+          {imgIndex == 0 ? <Frontpage /> : <img />}
         </div>
       </Container>
     </Section>
